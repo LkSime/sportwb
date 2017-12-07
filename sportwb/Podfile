@@ -7,8 +7,12 @@ target 'sportwb' do
 
   # Pods for sportwb
 
-  pod 'AFNetworking', '~> 3.0'
-
+	pod 'AFNetworking', '~> 3.0'
+	pod 'SVProgressHUD'
+	pod 'MJRefresh'
+  pod 'Masonry'
+  pod 'Mantle'
+  
   target 'sportwbTests' do
     inherit! :search_paths
     # Pods for testing

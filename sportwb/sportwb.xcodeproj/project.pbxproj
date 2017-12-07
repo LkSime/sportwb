@@ -10,6 +10,24 @@
 		12339E9FABB643CBA057D724 /* libPods-sportwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF207A99EE48F5ACA684182 /* libPods-sportwb.a */; };
 		21BAAFE42BB99837FCFA0A26 /* libPods-sportwbTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB4A7C08481278D3AD23DD /* libPods-sportwbTests.a */; };
 		3FFBCA8F2E8907DB5D739E4F /* libPods-sportwbUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E7498134734B879097EB98 /* libPods-sportwbUITests.a */; };
+		6AF601BE1FD91C79008A97AF /* AFAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601BD1FD91C79008A97AF /* AFAppClient.m */; };
+		6AF601C21FD92148008A97AF /* LKBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C11FD92148008A97AF /* LKBaseApi.m */; };
+		6AF601C51FD92292008A97AF /* LKCommonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C41FD92292008A97AF /* LKCommonDataModel.m */; };
+		6AF601CD1FD92797008A97AF /* LKParamsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601CC1FD92797008A97AF /* LKParamsUtils.m */; };
+		6AF601D01FD92957008A97AF /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601CF1FD92957008A97AF /* StringUtils.m */; };
+		6AF601D31FD92B1B008A97AF /* LKSystemInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601D21FD92B1B008A97AF /* LKSystemInfoApi.m */; };
+		6AF601E51FD92DA4008A97AF /* SDRotationLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601D81FD92DA3008A97AF /* SDRotationLoopProgressView.m */; };
+		6AF601E61FD92DA4008A97AF /* SDBallProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601D91FD92DA3008A97AF /* SDBallProgressView.m */; };
+		6AF601E71FD92DA4008A97AF /* SDLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601DA1FD92DA3008A97AF /* SDLoopProgressView.m */; };
+		6AF601E81FD92DA4008A97AF /* SDTransparentPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601DD1FD92DA3008A97AF /* SDTransparentPieProgressView.m */; };
+		6AF601E91FD92DA4008A97AF /* SDPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601DE1FD92DA3008A97AF /* SDPieProgressView.m */; };
+		6AF601EA1FD92DA4008A97AF /* SDBaseProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601DF1FD92DA3008A97AF /* SDBaseProgressView.m */; };
+		6AF601EB1FD92DA4008A97AF /* SDPieLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601E11FD92DA3008A97AF /* SDPieLoopProgressView.m */; };
+		6AF601F01FD92EB2008A97AF /* UIViewController+Navbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601EE1FD92EB2008A97AF /* UIViewController+Navbar.m */; };
+		6AF601F71FD930EB008A97AF /* RootNaviControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601F61FD930EB008A97AF /* RootNaviControllerUtil.m */; };
+		6AF601FD1FD93775008A97AF /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601FC1FD93775008A97AF /* UIColor+FlatUI.m */; };
+		6AF602031FD93E9C008A97AF /* LKSystemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF602021FD93E9C008A97AF /* LKSystemModel.m */; };
+		6AF602071FD9406A008A97AF /* LKDataDictionaryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF602061FD9406A008A97AF /* LKDataDictionaryManager.m */; };
 		BC9878EB1FD851A8001D6CA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9878EA1FD851A8001D6CA0 /* AppDelegate.m */; };
 		BC9878EE1FD851A8001D6CA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9878ED1FD851A8001D6CA0 /* ViewController.m */; };
 		BC9878F11FD851A8001D6CA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9878EF1FD851A8001D6CA0 /* Main.storyboard */; };
@@ -42,6 +60,48 @@
 		462AAF546C3DF42DE95F0026 /* Pods-sportwbUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sportwbUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sportwbUITests/Pods-sportwbUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		46EB4A7C08481278D3AD23DD /* libPods-sportwbTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sportwbTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		579CFC0EBD7879C31BFFBA70 /* Pods-sportwb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sportwb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sportwb/Pods-sportwb.debug.xcconfig"; sourceTree = "<group>"; };
+		6AF601BC1FD91C79008A97AF /* AFAppClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFAppClient.h; sourceTree = "<group>"; };
+		6AF601BD1FD91C79008A97AF /* AFAppClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFAppClient.m; sourceTree = "<group>"; };
+		6AF601BF1FD91D2D008A97AF /* ApiUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiUrl.h; sourceTree = "<group>"; };
+		6AF601C01FD92148008A97AF /* LKBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKBaseApi.h; sourceTree = "<group>"; };
+		6AF601C11FD92148008A97AF /* LKBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKBaseApi.m; sourceTree = "<group>"; };
+		6AF601C31FD92292008A97AF /* LKCommonDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKCommonDataModel.h; sourceTree = "<group>"; };
+		6AF601C41FD92292008A97AF /* LKCommonDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKCommonDataModel.m; sourceTree = "<group>"; };
+		6AF601CB1FD92797008A97AF /* LKParamsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKParamsUtils.h; sourceTree = "<group>"; };
+		6AF601CC1FD92797008A97AF /* LKParamsUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKParamsUtils.m; sourceTree = "<group>"; };
+		6AF601CE1FD92957008A97AF /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
+		6AF601CF1FD92957008A97AF /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
+		6AF601D11FD92B1B008A97AF /* LKSystemInfoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKSystemInfoApi.h; sourceTree = "<group>"; };
+		6AF601D21FD92B1B008A97AF /* LKSystemInfoApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKSystemInfoApi.m; sourceTree = "<group>"; };
+		6AF601D61FD92DA3008A97AF /* SDPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPieProgressView.h; sourceTree = "<group>"; };
+		6AF601D71FD92DA3008A97AF /* SDBaseProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseProgressView.h; sourceTree = "<group>"; };
+		6AF601D81FD92DA3008A97AF /* SDRotationLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRotationLoopProgressView.m; sourceTree = "<group>"; };
+		6AF601D91FD92DA3008A97AF /* SDBallProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBallProgressView.m; sourceTree = "<group>"; };
+		6AF601DA1FD92DA3008A97AF /* SDLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLoopProgressView.m; sourceTree = "<group>"; };
+		6AF601DB1FD92DA3008A97AF /* SDPieLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPieLoopProgressView.h; sourceTree = "<group>"; };
+		6AF601DC1FD92DA3008A97AF /* SDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDProgressView.h; sourceTree = "<group>"; };
+		6AF601DD1FD92DA3008A97AF /* SDTransparentPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTransparentPieProgressView.m; sourceTree = "<group>"; };
+		6AF601DE1FD92DA3008A97AF /* SDPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPieProgressView.m; sourceTree = "<group>"; };
+		6AF601DF1FD92DA3008A97AF /* SDBaseProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseProgressView.m; sourceTree = "<group>"; };
+		6AF601E01FD92DA3008A97AF /* SDLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLoopProgressView.h; sourceTree = "<group>"; };
+		6AF601E11FD92DA3008A97AF /* SDPieLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPieLoopProgressView.m; sourceTree = "<group>"; };
+		6AF601E21FD92DA3008A97AF /* SDBallProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBallProgressView.h; sourceTree = "<group>"; };
+		6AF601E31FD92DA3008A97AF /* SDRotationLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRotationLoopProgressView.h; sourceTree = "<group>"; };
+		6AF601E41FD92DA3008A97AF /* SDTransparentPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTransparentPieProgressView.h; sourceTree = "<group>"; };
+		6AF601EE1FD92EB2008A97AF /* UIViewController+Navbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navbar.m"; sourceTree = "<group>"; };
+		6AF601EF1FD92EB2008A97AF /* UIViewController+Navbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navbar.h"; sourceTree = "<group>"; };
+		6AF601F21FD92F77008A97AF /* LKDeviceMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKDeviceMacro.h; sourceTree = "<group>"; };
+		6AF601F31FD92F77008A97AF /* LKColorMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKColorMacro.h; sourceTree = "<group>"; };
+		6AF601F41FD92F77008A97AF /* LKFontMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKFontMacro.h; sourceTree = "<group>"; };
+		6AF601F51FD930EB008A97AF /* RootNaviControllerUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootNaviControllerUtil.h; sourceTree = "<group>"; };
+		6AF601F61FD930EB008A97AF /* RootNaviControllerUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootNaviControllerUtil.m; sourceTree = "<group>"; };
+		6AF601F91FD931A3008A97AF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6AF601FB1FD93775008A97AF /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatUI.h"; sourceTree = "<group>"; };
+		6AF601FC1FD93775008A97AF /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatUI.m"; sourceTree = "<group>"; };
+		6AF602011FD93E9C008A97AF /* LKSystemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKSystemModel.h; sourceTree = "<group>"; };
+		6AF602021FD93E9C008A97AF /* LKSystemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKSystemModel.m; sourceTree = "<group>"; };
+		6AF602051FD9406A008A97AF /* LKDataDictionaryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKDataDictionaryManager.h; sourceTree = "<group>"; };
+		6AF602061FD9406A008A97AF /* LKDataDictionaryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKDataDictionaryManager.m; sourceTree = "<group>"; };
 		6CF207A99EE48F5ACA684182 /* libPods-sportwb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sportwb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E32DA55D4E7BA2DC9AD8AEB /* Pods-sportwbTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sportwbTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sportwbTests/Pods-sportwbTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86B91020BE8FCB8FD9AE6849 /* Pods-sportwbTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sportwbTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sportwbTests/Pods-sportwbTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +153,162 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AF601BA1FD91C60008A97AF /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				6AF601BB1FD91C60008A97AF /* Http */,
+				6AF601BF1FD91D2D008A97AF /* ApiUrl.h */,
+				6AF601D11FD92B1B008A97AF /* LKSystemInfoApi.h */,
+				6AF601D21FD92B1B008A97AF /* LKSystemInfoApi.m */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		6AF601BB1FD91C60008A97AF /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				6AF601BC1FD91C79008A97AF /* AFAppClient.h */,
+				6AF601BD1FD91C79008A97AF /* AFAppClient.m */,
+				6AF601C01FD92148008A97AF /* LKBaseApi.h */,
+				6AF601C11FD92148008A97AF /* LKBaseApi.m */,
+				6AF601C31FD92292008A97AF /* LKCommonDataModel.h */,
+				6AF601C41FD92292008A97AF /* LKCommonDataModel.m */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		6AF601C61FD92745008A97AF /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				6AF602041FD9403D008A97AF /* Manager */,
+				6AF601F11FD92F77008A97AF /* Macro */,
+				6AF601EC1FD92EB2008A97AF /* Extension */,
+				6AF601D41FD92DA3008A97AF /* 3rd */,
+				6AF601C71FD92745008A97AF /* Utils */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		6AF601C71FD92745008A97AF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6AF601CE1FD92957008A97AF /* StringUtils.h */,
+				6AF601CF1FD92957008A97AF /* StringUtils.m */,
+				6AF601CB1FD92797008A97AF /* LKParamsUtils.h */,
+				6AF601CC1FD92797008A97AF /* LKParamsUtils.m */,
+				6AF601F51FD930EB008A97AF /* RootNaviControllerUtil.h */,
+				6AF601F61FD930EB008A97AF /* RootNaviControllerUtil.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6AF601D41FD92DA3008A97AF /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				6AF601D51FD92DA3008A97AF /* SDProgressView */,
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
+		6AF601D51FD92DA3008A97AF /* SDProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				6AF601D61FD92DA3008A97AF /* SDPieProgressView.h */,
+				6AF601D71FD92DA3008A97AF /* SDBaseProgressView.h */,
+				6AF601D81FD92DA3008A97AF /* SDRotationLoopProgressView.m */,
+				6AF601D91FD92DA3008A97AF /* SDBallProgressView.m */,
+				6AF601DA1FD92DA3008A97AF /* SDLoopProgressView.m */,
+				6AF601DB1FD92DA3008A97AF /* SDPieLoopProgressView.h */,
+				6AF601DC1FD92DA3008A97AF /* SDProgressView.h */,
+				6AF601DD1FD92DA3008A97AF /* SDTransparentPieProgressView.m */,
+				6AF601DE1FD92DA3008A97AF /* SDPieProgressView.m */,
+				6AF601DF1FD92DA3008A97AF /* SDBaseProgressView.m */,
+				6AF601E01FD92DA3008A97AF /* SDLoopProgressView.h */,
+				6AF601E11FD92DA3008A97AF /* SDPieLoopProgressView.m */,
+				6AF601E21FD92DA3008A97AF /* SDBallProgressView.h */,
+				6AF601E31FD92DA3008A97AF /* SDRotationLoopProgressView.h */,
+				6AF601E41FD92DA3008A97AF /* SDTransparentPieProgressView.h */,
+			);
+			path = SDProgressView;
+			sourceTree = "<group>";
+		};
+		6AF601EC1FD92EB2008A97AF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6AF601FA1FD93775008A97AF /* Ios7Color */,
+				6AF601ED1FD92EB2008A97AF /* UIViewController+Navbar */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6AF601ED1FD92EB2008A97AF /* UIViewController+Navbar */ = {
+			isa = PBXGroup;
+			children = (
+				6AF601EE1FD92EB2008A97AF /* UIViewController+Navbar.m */,
+				6AF601EF1FD92EB2008A97AF /* UIViewController+Navbar.h */,
+			);
+			path = "UIViewController+Navbar";
+			sourceTree = "<group>";
+		};
+		6AF601F11FD92F77008A97AF /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				6AF601F21FD92F77008A97AF /* LKDeviceMacro.h */,
+				6AF601F31FD92F77008A97AF /* LKColorMacro.h */,
+				6AF601F41FD92F77008A97AF /* LKFontMacro.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		6AF601F81FD9318C008A97AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AF601F91FD931A3008A97AF /* PrefixHeader.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AF601FA1FD93775008A97AF /* Ios7Color */ = {
+			isa = PBXGroup;
+			children = (
+				6AF601FB1FD93775008A97AF /* UIColor+FlatUI.h */,
+				6AF601FC1FD93775008A97AF /* UIColor+FlatUI.m */,
+			);
+			path = Ios7Color;
+			sourceTree = "<group>";
+		};
+		6AF601FE1FD93CC7008A97AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6AF601FF1FD93CC7008A97AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6AF602011FD93E9C008A97AF /* LKSystemModel.h */,
+				6AF602021FD93E9C008A97AF /* LKSystemModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6AF602001FD93CC8008A97AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6AF602041FD9403D008A97AF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6AF602051FD9406A008A97AF /* LKDataDictionaryManager.h */,
+				6AF602061FD9406A008A97AF /* LKDataDictionaryManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		7F9D3F16F2CB7B68FCE3D75E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +357,12 @@
 		BC9878E81FD851A8001D6CA0 /* sportwb */ = {
 			isa = PBXGroup;
 			children = (
+				6AF601FE1FD93CC7008A97AF /* Controllers */,
+				6AF601FF1FD93CC7008A97AF /* Models */,
+				6AF602001FD93CC8008A97AF /* Views */,
+				6AF601F81FD9318C008A97AF /* Supporting Files */,
+				6AF601C61FD92745008A97AF /* Lib */,
+				6AF601BA1FD91C60008A97AF /* Api */,
 				BC9878E91FD851A8001D6CA0 /* AppDelegate.h */,
 				BC9878EA1FD851A8001D6CA0 /* AppDelegate.m */,
 				BC9878EC1FD851A8001D6CA0 /* ViewController.h */,
@@ -243,6 +465,7 @@
 		BC9878DE1FD851A7001D6CA0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LK;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Mahalo;
 				TargetAttributes = {
@@ -367,9 +590,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-sportwb/Pods-sportwb-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -461,9 +688,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AF601E81FD92DA4008A97AF /* SDTransparentPieProgressView.m in Sources */,
+				6AF601F71FD930EB008A97AF /* RootNaviControllerUtil.m in Sources */,
+				6AF601F01FD92EB2008A97AF /* UIViewController+Navbar.m in Sources */,
+				6AF601FD1FD93775008A97AF /* UIColor+FlatUI.m in Sources */,
+				6AF601EB1FD92DA4008A97AF /* SDPieLoopProgressView.m in Sources */,
+				6AF601D01FD92957008A97AF /* StringUtils.m in Sources */,
 				BC9878EE1FD851A8001D6CA0 /* ViewController.m in Sources */,
+				6AF601D31FD92B1B008A97AF /* LKSystemInfoApi.m in Sources */,
+				6AF601E61FD92DA4008A97AF /* SDBallProgressView.m in Sources */,
+				6AF601E71FD92DA4008A97AF /* SDLoopProgressView.m in Sources */,
 				BC9878F91FD851A8001D6CA0 /* main.m in Sources */,
+				6AF601E91FD92DA4008A97AF /* SDPieProgressView.m in Sources */,
 				BC9878EB1FD851A8001D6CA0 /* AppDelegate.m in Sources */,
+				6AF601C51FD92292008A97AF /* LKCommonDataModel.m in Sources */,
+				6AF601BE1FD91C79008A97AF /* AFAppClient.m in Sources */,
+				6AF601CD1FD92797008A97AF /* LKParamsUtils.m in Sources */,
+				6AF601E51FD92DA4008A97AF /* SDRotationLoopProgressView.m in Sources */,
+				6AF601C21FD92148008A97AF /* LKBaseApi.m in Sources */,
+				6AF602071FD9406A008A97AF /* LKDataDictionaryManager.m in Sources */,
+				6AF601EA1FD92DA4008A97AF /* SDBaseProgressView.m in Sources */,
+				6AF602031FD93E9C008A97AF /* LKSystemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +811,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -615,7 +860,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -628,7 +873,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FT8WAAAT7B;
+				DEVELOPMENT_TEAM = 8C888TR58A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sportwb/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = sportwb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -644,7 +891,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FT8WAAAT7B;
+				DEVELOPMENT_TEAM = 8C888TR58A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sportwb/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = sportwb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
