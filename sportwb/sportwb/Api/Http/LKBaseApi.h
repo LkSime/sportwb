@@ -24,22 +24,10 @@ typedef void (^BaseSuccessBlk)(id data,LKCommonDataModel *dataModel);
                            success:(BaseSuccessBlk)successBlk
                            failure:(ErrorBlock)errorBlk;
 
-//-(NSURLSessionDataTask*)getWithUrl:(NSString*)url
-//                            params:(NSDictionary *)paramsDic
-//                          progress:(void(^)(NSProgress * progress))downloadProgress
-//                           success:(BaseSuccessBlk)successBlk
-//                           failure:(ErrorBlock)errorBlk;
 
 -(NSURLSessionDataTask*)postWithUrl:(NSString*)url
                              params:(NSDictionary *)paramsDic
                             success:(BaseSuccessBlk)successBlk
                             failure:(ErrorBlock)errorBlk;
-
-//-(NSURLSessionDataTask*)postWithUrl:(NSString*)url
-//                             params:(NSDictionary *)paramsDic
-//                           progress:(void(^)(NSProgress *progress)) uploadProgress
-//                            success:(BaseSuccessBlk)successBlk
-//                            failure:(ErrorBlock)errorBlk;
-
 
 @end

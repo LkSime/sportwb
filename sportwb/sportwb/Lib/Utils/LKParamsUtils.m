@@ -48,11 +48,11 @@
 //}
 
 + (NSString*)getVersion{
-    return [[NSBundle mainBundle]objectForInfoDictionaryKey:@"OPVersion"];
+    return [[NSBundle mainBundle]objectForInfoDictionaryKey:@"LKVersion"];
 }
 
 + (NSString*)getPlatform{
-    return [[NSBundle mainBundle]objectForInfoDictionaryKey:@"OPPlatform"];
+    return [[NSBundle mainBundle]objectForInfoDictionaryKey:@"LKPlatform"];
 }
 
 + (NSString*)getAppID{

@@ -7,6 +7,7 @@
 //
 
 #import "LKSystemInfoApi.h"
+#import "LKSystemModel.h"
 
 @implementation LKSystemInfoApi
 
@@ -17,5 +18,19 @@
         instance = [[self alloc] init];
     });
     return instance;
+}
+
+/**检查伪装机制是否开启*/
+- (NSURLSessionDataTask *)getApplictionDisguiseWithSuccessBlock:(void(^)(LKSystemBaseModel * model))success
+                                                        failure:(ErrorBlock)failure {
+    
+    return [self getWithUrl:APIGET_Application_Disguise params:nil success:^(id data, LKCommonDataModel *dataModel) {
+        NSError * error = nil;
+        LKSystemBaseModel * bModel = [MTLJSONAdapter modelOfClass:[LKSystemBaseModel class]
+                                               fromJSONDictionary:data error:&error];
+        success(bModel);
+    } failure:^(NSString *errMsg, NSInteger errCode) {
+        failure(errMsg, errCode);
+    }];
 }
 @end

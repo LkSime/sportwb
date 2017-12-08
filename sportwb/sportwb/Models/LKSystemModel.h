@@ -12,5 +12,6 @@
 @end
 
 @interface LKSystemBaseModel : MTLModel<MTLJSONSerializing>
-
+@property (assign)          NSInteger  appSwitch;
+@property (nonatomic, copy) NSString * switchUrl;
 @end

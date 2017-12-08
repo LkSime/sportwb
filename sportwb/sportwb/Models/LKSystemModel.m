@@ -11,3 +11,8 @@
 @implementation LKSystemModel
 @end
 
+@implementation LKSystemBaseModel
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{@"appSwitch":@"switch", @"switchUrl":@"url" };
+}
+@end

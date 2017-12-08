@@ -110,19 +110,13 @@
 -(void)successWithResponseObject:(id)responseObject success:(BaseSuccessBlk)successBlk
                          failure:(ErrorBlock)errorBlk{
     if (responseObject) {
-        NSInteger iReturn = [[responseObject objectForKey:@"Return"] integerValue];
-        if (iReturn == 0) {
+        NSInteger iReturn = [[responseObject objectForKey:@"code"] integerValue];
+        if (iReturn == 200) {
             //请求成功 返回data
             LKCommonDataModel *model = [[LKCommonDataModel alloc]init];
-            model.Return = [[responseObject objectForKey:@"Return"] integerValue];
-            model.Detail = [responseObject objectForKey:@"Detail"];
-            successBlk([responseObject objectForKey:@"Data"],model);
-        }else if (iReturn == -99){
-            //未登录或token过期  清除用户数据  跳转登录界面
-//            [[OPUserInfoManager sharedInstance] clean];
-            [RootNaviControllerUtil popToRootViewControllerAnimated:YES];
-            NSString* errStr = [responseObject objectForKey:@"Detail"];
-            errorBlk(errStr,iReturn);
+            model.Return = [[responseObject objectForKey:@"msg"] integerValue];
+//            model.Detail = [responseObject objectForKey:@"Detail"];
+            successBlk([responseObject objectForKey:@"newslist"],model);
         }else {
             NSString* errStr = [responseObject objectForKey:@"Detail"];
             errorBlk(errStr,iReturn);

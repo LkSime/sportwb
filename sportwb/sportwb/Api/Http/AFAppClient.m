@@ -18,7 +18,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        _Client = [[AFAppClient alloc] initWithBaseURL:[NSURL URLWithString:BASE_URL_BUILD]];
+        _Client = [[AFAppClient alloc] initWithBaseURL:[NSURL URLWithString:@""]];
         
         AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
         securityPolicy.allowInvalidCertificates = YES;

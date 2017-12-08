@@ -11,7 +11,7 @@ target 'sportwb' do
 	pod 'SVProgressHUD'
 	pod 'MJRefresh'
   pod 'Masonry'
-  pod 'Mantle'
+  pod 'Mantle' 
   
   target 'sportwbTests' do
     inherit! :search_paths

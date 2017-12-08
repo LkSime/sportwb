@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "LKSystemInfoApi.h"
+#import "LKSystemModel.h"
+#import "LKNewsApi.h"   //测试用
+#import "LKNewsModel.h" //测试用
+#import "LKWebTrueViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,14 +22,40 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self applicationDisguise];
+    
     return YES;
 }
 
 //应用伪装开光:返回
-- (NSString *)applicationDisguise {
+- (void)applicationDisguise {
+    __weak __typeof(self) weakSelf = self;
+    [[LKSystemInfoApi shareInstance] getApplictionDisguiseWithSuccessBlock:^(LKSystemBaseModel *model) {
+        [weakSelf createTrueView:model.switchUrl];
+    } failure:^(NSString *errMsg, NSInteger errCode) {
+        NSLog(errMsg, errCode);
+    }];
     
-    return @"";
+//    [[LKNewsApi shareInstance] getSocialOfNewsIndex:1 page_size:10 withSuccessBlock:^(NSArray *mArray) {
+//        NSArray * aaa = mArray;
+//        NSLog(@"%@", aaa);
+//    } withErrorBlock:^(NSString *errMsg, NSInteger errCode) {
+//
+//    }];
 }
+
+//创建webviewcontroller
+- (void)createTrueView:(NSString *)sURL {
+    LKWebTrueViewController * webVC = [LKWebTrueViewController new];
+    webVC.webTitle = @"xxx";
+    webVC.webURL = sURL;
+    self.rootNavigation = [[UINavigationController alloc] init];
+
+    self.window.rootViewController = self.rootNavigation;
+    [self.window makeKeyAndVisible];
+    [RootNaviControllerUtil pushViewController:webVC animated:YES];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
