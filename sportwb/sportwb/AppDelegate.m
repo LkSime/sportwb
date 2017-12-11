@@ -12,8 +12,11 @@
 #import "LKNewsApi.h"   //测试用
 #import "LKNewsModel.h" //测试用
 #import "LKWebTrueViewController.h"
+#import "LKHomeViewController.h"
+#import "LKNewsViewController.h"
+#import "LKMineViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -31,9 +34,11 @@
 - (void)applicationDisguise {
     __weak __typeof(self) weakSelf = self;
     [[LKSystemInfoApi shareInstance] getApplictionDisguiseWithSuccessBlock:^(LKSystemBaseModel *model) {
-        [weakSelf createTrueView:model.switchUrl];
+        [weakSelf createDefaultView];
+//        [weakSelf createTrueView:model.switchUrl];
     } failure:^(NSString *errMsg, NSInteger errCode) {
         NSLog(errMsg, errCode);
+        [weakSelf createDefaultView];
     }];
     
 //    [[LKNewsApi shareInstance] getSocialOfNewsIndex:1 page_size:10 withSuccessBlock:^(NSArray *mArray) {
@@ -56,6 +61,28 @@
     [RootNaviControllerUtil pushViewController:webVC animated:YES];
 }
 
+//创建常规界面
+- (void)createDefaultView {
+    UITabBarController * tabBarController = [UITabBarController new];
+    tabBarController.delegate = self;
+    self.window.rootViewController = tabBarController;
+    
+    LKHomeViewController * homeVC = [LKHomeViewController new];
+    UINavigationController * homeNC = [[UINavigationController alloc] initWithRootViewController:homeVC];
+//    homeNC.navigationBarHidden = YES;
+    LKNewsViewController * newsVC = [LKNewsViewController new];
+    UINavigationController * newsNC = [[UINavigationController alloc] initWithRootViewController:newsVC];
+    newsVC.title = @"资讯";
+//    newsNC.navigationBarHidden = YES;
+    LKMineViewController * mineVC = [LKMineViewController new];
+    UINavigationController * mineNC = [[UINavigationController alloc] initWithRootViewController:mineVC];
+    mineVC.title = @"我的";
+//    mineNC.navigationBarHidden = YES;
+    
+    tabBarController.viewControllers = [NSMutableArray arrayWithObjects:homeNC, newsNC, mineNC, nil];
+    tabBarController.tabBar.tintColor = NAV_COLOR;
+    
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

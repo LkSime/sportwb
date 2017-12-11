@@ -35,6 +35,7 @@
 #define COLOR_FOR_ORANGE   ColorFromHex(0xef9c63)
 #define COLOR_FOR_BLUE     ColorFromHex(0x6496c8)
 
+#define NAV_COLOR           ColorFromHex(0x6496c8)
 
 
 /**文字颜色*/

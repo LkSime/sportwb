@@ -13,9 +13,17 @@
 		6A350D4F1FDA616900DF62F3 /* AFAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D4D1FDA616900DF62F3 /* AFAppClient.m */; };
 		6A350D521FDA694C00DF62F3 /* LKNewsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D511FDA694C00DF62F3 /* LKNewsApi.m */; };
 		6A350D551FDA6AAD00DF62F3 /* LKNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D541FDA6AAD00DF62F3 /* LKNewsModel.m */; };
-		6A350D591FDA8C1F00DF62F3 /* LKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D581FDA8C1F00DF62F3 /* LKBaseViewController.m */; };
-		6A350D5C1FDA8DC000DF62F3 /* LKBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D5B1FDA8DC000DF62F3 /* LKBaseWebViewController.m */; };
 		6A350D5F1FDA8FC500DF62F3 /* LKWebTrueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D5E1FDA8FC500DF62F3 /* LKWebTrueViewController.m */; };
+		6A350D651FDA9B1600DF62F3 /* LKBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D611FDA9B1500DF62F3 /* LKBaseWebViewController.m */; };
+		6A350D661FDA9B1600DF62F3 /* LKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D621FDA9B1500DF62F3 /* LKBaseViewController.m */; };
+		6A350D691FDE549B00DF62F3 /* LKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D681FDE549B00DF62F3 /* LKHomeViewController.m */; };
+		6A350D6C1FDE54A600DF62F3 /* LKNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D6B1FDE54A600DF62F3 /* LKNewsViewController.m */; };
+		6A350D6F1FDE54AE00DF62F3 /* LKMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D6E1FDE54AE00DF62F3 /* LKMineViewController.m */; };
+		6A350D8E1FDE6FC100DF62F3 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D8D1FDE6FC100DF62F3 /* pinyin.c */; };
+		6A350D951FDE7A4F00DF62F3 /* LKHomeBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D941FDE7A4F00DF62F3 /* LKHomeBannerView.m */; };
+		6A350D981FDE82E700DF62F3 /* LKADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D971FDE82E700DF62F3 /* LKADScrollView.m */; };
+		6A350D9B1FDE834300DF62F3 /* OPADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D9A1FDE834300DF62F3 /* OPADView.m */; };
+		6A350DA11FDE839700DF62F3 /* OPADViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350DA01FDE839700DF62F3 /* OPADViewButton.m */; };
 		6AF601C21FD92148008A97AF /* LKBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C11FD92148008A97AF /* LKBaseApi.m */; };
 		6AF601C51FD92292008A97AF /* LKCommonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C41FD92292008A97AF /* LKCommonDataModel.m */; };
 		6AF601CD1FD92797008A97AF /* LKParamsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601CC1FD92797008A97AF /* LKParamsUtils.m */; };
@@ -71,12 +79,28 @@
 		6A350D511FDA694C00DF62F3 /* LKNewsApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKNewsApi.m; sourceTree = "<group>"; };
 		6A350D531FDA6AAD00DF62F3 /* LKNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKNewsModel.h; sourceTree = "<group>"; };
 		6A350D541FDA6AAD00DF62F3 /* LKNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKNewsModel.m; sourceTree = "<group>"; };
-		6A350D571FDA8C1F00DF62F3 /* LKBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKBaseViewController.h; sourceTree = "<group>"; };
-		6A350D581FDA8C1F00DF62F3 /* LKBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKBaseViewController.m; sourceTree = "<group>"; };
-		6A350D5A1FDA8DC000DF62F3 /* LKBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKBaseWebViewController.h; sourceTree = "<group>"; };
-		6A350D5B1FDA8DC000DF62F3 /* LKBaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKBaseWebViewController.m; sourceTree = "<group>"; };
 		6A350D5D1FDA8FC500DF62F3 /* LKWebTrueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKWebTrueViewController.h; sourceTree = "<group>"; };
 		6A350D5E1FDA8FC500DF62F3 /* LKWebTrueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKWebTrueViewController.m; sourceTree = "<group>"; };
+		6A350D611FDA9B1500DF62F3 /* LKBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBaseWebViewController.m; sourceTree = "<group>"; };
+		6A350D621FDA9B1500DF62F3 /* LKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBaseViewController.m; sourceTree = "<group>"; };
+		6A350D631FDA9B1500DF62F3 /* LKBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBaseWebViewController.h; sourceTree = "<group>"; };
+		6A350D641FDA9B1500DF62F3 /* LKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBaseViewController.h; sourceTree = "<group>"; };
+		6A350D671FDE549B00DF62F3 /* LKHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKHomeViewController.h; sourceTree = "<group>"; };
+		6A350D681FDE549B00DF62F3 /* LKHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKHomeViewController.m; sourceTree = "<group>"; };
+		6A350D6A1FDE54A600DF62F3 /* LKNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKNewsViewController.h; sourceTree = "<group>"; };
+		6A350D6B1FDE54A600DF62F3 /* LKNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKNewsViewController.m; sourceTree = "<group>"; };
+		6A350D6D1FDE54AE00DF62F3 /* LKMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKMineViewController.h; sourceTree = "<group>"; };
+		6A350D6E1FDE54AE00DF62F3 /* LKMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKMineViewController.m; sourceTree = "<group>"; };
+		6A350D8C1FDE6FC100DF62F3 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
+		6A350D8D1FDE6FC100DF62F3 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
+		6A350D931FDE7A4F00DF62F3 /* LKHomeBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKHomeBannerView.h; sourceTree = "<group>"; };
+		6A350D941FDE7A4F00DF62F3 /* LKHomeBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKHomeBannerView.m; sourceTree = "<group>"; };
+		6A350D961FDE82E700DF62F3 /* LKADScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKADScrollView.h; sourceTree = "<group>"; };
+		6A350D971FDE82E700DF62F3 /* LKADScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKADScrollView.m; sourceTree = "<group>"; };
+		6A350D991FDE834300DF62F3 /* OPADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPADView.h; sourceTree = "<group>"; };
+		6A350D9A1FDE834300DF62F3 /* OPADView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPADView.m; sourceTree = "<group>"; };
+		6A350D9F1FDE839700DF62F3 /* OPADViewButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPADViewButton.h; sourceTree = "<group>"; };
+		6A350DA01FDE839700DF62F3 /* OPADViewButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPADViewButton.m; sourceTree = "<group>"; };
 		6AF601BF1FD91D2D008A97AF /* ApiUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiUrl.h; sourceTree = "<group>"; };
 		6AF601C01FD92148008A97AF /* LKBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKBaseApi.h; sourceTree = "<group>"; };
 		6AF601C11FD92148008A97AF /* LKBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKBaseApi.m; sourceTree = "<group>"; };
@@ -168,15 +192,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6A350D561FDA8BFE00DF62F3 /* BaseViewController */ = {
+		6A350D601FDA9B1500DF62F3 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6A350D571FDA8C1F00DF62F3 /* LKBaseViewController.h */,
-				6A350D581FDA8C1F00DF62F3 /* LKBaseViewController.m */,
-				6A350D5A1FDA8DC000DF62F3 /* LKBaseWebViewController.h */,
-				6A350D5B1FDA8DC000DF62F3 /* LKBaseWebViewController.m */,
+				6A350D631FDA9B1500DF62F3 /* LKBaseWebViewController.h */,
+				6A350D611FDA9B1500DF62F3 /* LKBaseWebViewController.m */,
+				6A350D641FDA9B1500DF62F3 /* LKBaseViewController.h */,
+				6A350D621FDA9B1500DF62F3 /* LKBaseViewController.m */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		6A350D8B1FDE6FC100DF62F3 /* PingYin */ = {
+			isa = PBXGroup;
+			children = (
+				6A350D8C1FDE6FC100DF62F3 /* pinyin.h */,
+				6A350D8D1FDE6FC100DF62F3 /* pinyin.c */,
+			);
+			path = PingYin;
+			sourceTree = "<group>";
+		};
+		6A350D921FDE79D800DF62F3 /* HomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				6A350D931FDE7A4F00DF62F3 /* LKHomeBannerView.h */,
+				6A350D941FDE7A4F00DF62F3 /* LKHomeBannerView.m */,
+				6A350D961FDE82E700DF62F3 /* LKADScrollView.h */,
+				6A350D971FDE82E700DF62F3 /* LKADScrollView.m */,
+				6A350D991FDE834300DF62F3 /* OPADView.h */,
+				6A350D9A1FDE834300DF62F3 /* OPADView.m */,
+				6A350D9F1FDE839700DF62F3 /* OPADViewButton.h */,
+				6A350DA01FDE839700DF62F3 /* OPADViewButton.m */,
+			);
+			path = HomeViews;
 			sourceTree = "<group>";
 		};
 		6AF601BA1FD91C60008A97AF /* Api */ = {
@@ -233,6 +281,7 @@
 		6AF601D41FD92DA3008A97AF /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				6A350D8B1FDE6FC100DF62F3 /* PingYin */,
 				6AF601D51FD92DA3008A97AF /* SDProgressView */,
 			);
 			path = 3rd;
@@ -308,9 +357,15 @@
 		6AF601FE1FD93CC7008A97AF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6A350D561FDA8BFE00DF62F3 /* BaseViewController */,
+				6A350D601FDA9B1500DF62F3 /* BaseViewController */,
 				6A350D5D1FDA8FC500DF62F3 /* LKWebTrueViewController.h */,
 				6A350D5E1FDA8FC500DF62F3 /* LKWebTrueViewController.m */,
+				6A350D671FDE549B00DF62F3 /* LKHomeViewController.h */,
+				6A350D681FDE549B00DF62F3 /* LKHomeViewController.m */,
+				6A350D6A1FDE54A600DF62F3 /* LKNewsViewController.h */,
+				6A350D6B1FDE54A600DF62F3 /* LKNewsViewController.m */,
+				6A350D6D1FDE54AE00DF62F3 /* LKMineViewController.h */,
+				6A350D6E1FDE54AE00DF62F3 /* LKMineViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,6 +384,7 @@
 		6AF602001FD93CC8008A97AF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6A350D921FDE79D800DF62F3 /* HomeViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -657,9 +713,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-sportwb/Pods-sportwb-frameworks.sh",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-4/iOS/RevealServer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -721,26 +780,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A350D8E1FDE6FC100DF62F3 /* pinyin.c in Sources */,
 				6AF601E81FD92DA4008A97AF /* SDTransparentPieProgressView.m in Sources */,
 				6AF601F71FD930EB008A97AF /* RootNaviControllerUtil.m in Sources */,
-				6A350D591FDA8C1F00DF62F3 /* LKBaseViewController.m in Sources */,
 				6AF601F01FD92EB2008A97AF /* UIViewController+Navbar.m in Sources */,
 				6AF601FD1FD93775008A97AF /* UIColor+FlatUI.m in Sources */,
 				6AF601EB1FD92DA4008A97AF /* SDPieLoopProgressView.m in Sources */,
 				6AF601D01FD92957008A97AF /* StringUtils.m in Sources */,
 				BC9878EE1FD851A8001D6CA0 /* ViewController.m in Sources */,
+				6A350DA11FDE839700DF62F3 /* OPADViewButton.m in Sources */,
 				6AF601D31FD92B1B008A97AF /* LKSystemInfoApi.m in Sources */,
+				6A350D6C1FDE54A600DF62F3 /* LKNewsViewController.m in Sources */,
+				6A350D951FDE7A4F00DF62F3 /* LKHomeBannerView.m in Sources */,
+				6A350D6F1FDE54AE00DF62F3 /* LKMineViewController.m in Sources */,
 				6AF601E61FD92DA4008A97AF /* SDBallProgressView.m in Sources */,
+				6A350D661FDA9B1600DF62F3 /* LKBaseViewController.m in Sources */,
 				6A350D5F1FDA8FC500DF62F3 /* LKWebTrueViewController.m in Sources */,
 				6A350D551FDA6AAD00DF62F3 /* LKNewsModel.m in Sources */,
 				6AF601E71FD92DA4008A97AF /* SDLoopProgressView.m in Sources */,
-				6A350D5C1FDA8DC000DF62F3 /* LKBaseWebViewController.m in Sources */,
+				6A350D981FDE82E700DF62F3 /* LKADScrollView.m in Sources */,
+				6A350D691FDE549B00DF62F3 /* LKHomeViewController.m in Sources */,
 				BC9878F91FD851A8001D6CA0 /* main.m in Sources */,
+				6A350D651FDA9B1600DF62F3 /* LKBaseWebViewController.m in Sources */,
 				6AF601E91FD92DA4008A97AF /* SDPieProgressView.m in Sources */,
 				6A350D4F1FDA616900DF62F3 /* AFAppClient.m in Sources */,
 				BC9878EB1FD851A8001D6CA0 /* AppDelegate.m in Sources */,
 				6A350D521FDA694C00DF62F3 /* LKNewsApi.m in Sources */,
 				6AF601C51FD92292008A97AF /* LKCommonDataModel.m in Sources */,
+				6A350D9B1FDE834300DF62F3 /* OPADView.m in Sources */,
 				6AF601CD1FD92797008A97AF /* LKParamsUtils.m in Sources */,
 				6AF601E51FD92DA4008A97AF /* SDRotationLoopProgressView.m in Sources */,
 				6AF601C21FD92148008A97AF /* LKBaseApi.m in Sources */,
@@ -912,6 +979,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C888TR58A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/sportwb/Lib/3rd/BaiduMapKit/BaiduMapKit",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sportwb/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = sportwb/Info.plist;
@@ -930,6 +1001,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C888TR58A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/sportwb/Lib/3rd/BaiduMapKit/BaiduMapKit",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sportwb/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = sportwb/Info.plist;

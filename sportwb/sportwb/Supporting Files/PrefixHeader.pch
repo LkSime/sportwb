@@ -20,9 +20,11 @@
 #import <Mantle/Mantle.h>
 #import "MJRefresh.h"
 #import "Masonry.h"
+#import "UIColor+FlatUI.h"
 
 #import "LKFontMacro.h"
 #import "LKColorMacro.h"
+#import "LKDeviceMacro.h"
 #import "StringUtils.h"
 
 #endif /* PrefixHeader_pch */
