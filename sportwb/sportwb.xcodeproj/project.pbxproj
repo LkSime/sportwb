@@ -24,6 +24,8 @@
 		6A350D981FDE82E700DF62F3 /* LKADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D971FDE82E700DF62F3 /* LKADScrollView.m */; };
 		6A350D9B1FDE834300DF62F3 /* OPADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D9A1FDE834300DF62F3 /* OPADView.m */; };
 		6A350DA11FDE839700DF62F3 /* OPADViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350DA01FDE839700DF62F3 /* OPADViewButton.m */; };
+		6A6ACC8D1FDFC4CE0078F839 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACC8C1FDFC4CE0078F839 /* UIUtils.m */; };
+		6A6ACC901FDFC68E0078F839 /* LKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACC8F1FDFC68E0078F839 /* LKLoginViewController.m */; };
 		6AF601C21FD92148008A97AF /* LKBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C11FD92148008A97AF /* LKBaseApi.m */; };
 		6AF601C51FD92292008A97AF /* LKCommonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C41FD92292008A97AF /* LKCommonDataModel.m */; };
 		6AF601CD1FD92797008A97AF /* LKParamsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601CC1FD92797008A97AF /* LKParamsUtils.m */; };
@@ -101,6 +103,10 @@
 		6A350D9A1FDE834300DF62F3 /* OPADView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPADView.m; sourceTree = "<group>"; };
 		6A350D9F1FDE839700DF62F3 /* OPADViewButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPADViewButton.h; sourceTree = "<group>"; };
 		6A350DA01FDE839700DF62F3 /* OPADViewButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPADViewButton.m; sourceTree = "<group>"; };
+		6A6ACC8B1FDFC4CD0078F839 /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
+		6A6ACC8C1FDFC4CE0078F839 /* UIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
+		6A6ACC8E1FDFC68E0078F839 /* LKLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKLoginViewController.h; sourceTree = "<group>"; };
+		6A6ACC8F1FDFC68E0078F839 /* LKLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKLoginViewController.m; sourceTree = "<group>"; };
 		6AF601BF1FD91D2D008A97AF /* ApiUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiUrl.h; sourceTree = "<group>"; };
 		6AF601C01FD92148008A97AF /* LKBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKBaseApi.h; sourceTree = "<group>"; };
 		6AF601C11FD92148008A97AF /* LKBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKBaseApi.m; sourceTree = "<group>"; };
@@ -268,6 +274,8 @@
 		6AF601C71FD92745008A97AF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6A6ACC8B1FDFC4CD0078F839 /* UIUtils.h */,
+				6A6ACC8C1FDFC4CE0078F839 /* UIUtils.m */,
 				6AF601CE1FD92957008A97AF /* StringUtils.h */,
 				6AF601CF1FD92957008A97AF /* StringUtils.m */,
 				6AF601CB1FD92797008A97AF /* LKParamsUtils.h */,
@@ -366,6 +374,8 @@
 				6A350D6B1FDE54A600DF62F3 /* LKNewsViewController.m */,
 				6A350D6D1FDE54AE00DF62F3 /* LKMineViewController.h */,
 				6A350D6E1FDE54AE00DF62F3 /* LKMineViewController.m */,
+				6A6ACC8E1FDFC68E0078F839 /* LKLoginViewController.h */,
+				6A6ACC8F1FDFC68E0078F839 /* LKLoginViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -784,6 +794,8 @@
 				6AF601E81FD92DA4008A97AF /* SDTransparentPieProgressView.m in Sources */,
 				6AF601F71FD930EB008A97AF /* RootNaviControllerUtil.m in Sources */,
 				6AF601F01FD92EB2008A97AF /* UIViewController+Navbar.m in Sources */,
+				6A6ACC8D1FDFC4CE0078F839 /* UIUtils.m in Sources */,
+				6A6ACC901FDFC68E0078F839 /* LKLoginViewController.m in Sources */,
 				6AF601FD1FD93775008A97AF /* UIColor+FlatUI.m in Sources */,
 				6AF601EB1FD92DA4008A97AF /* SDPieLoopProgressView.m in Sources */,
 				6AF601D01FD92957008A97AF /* StringUtils.m in Sources */,
@@ -977,12 +989,10 @@
 			baseConfigurationReference = 579CFC0EBD7879C31BFFBA70 /* Pods-sportwb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C888TR58A;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/sportwb/Lib/3rd/BaiduMapKit/BaiduMapKit",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sportwb/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = sportwb/Info.plist;
@@ -990,7 +1000,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mahalo.sportwb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -999,12 +1010,10 @@
 			baseConfigurationReference = C745A24CE6C8832DA0BF9FD7 /* Pods-sportwb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C888TR58A;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/sportwb/Lib/3rd/BaiduMapKit/BaiduMapKit",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sportwb/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = sportwb/Info.plist;
@@ -1012,7 +1021,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mahalo.sportwb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

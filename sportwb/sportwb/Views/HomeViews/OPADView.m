@@ -23,7 +23,7 @@
     if (self) {
         self.userInteractionEnabled = YES;
         self.backgroundColor = [UIColor clearColor];
-        float adHeight = SCREEN_WIDTH * 19.0f / 32.0f;
+        float adHeight = ADHeight;
         _titleImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, adHeight)];
         self.clipsToBounds = YES;
         [self addSubview:_titleImage];

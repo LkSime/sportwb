@@ -11,12 +11,13 @@
 #import "LKSystemModel.h"
 #import "LKADScrollView.h"
 
-@interface LKHomeViewController ()<LKADScrollViewDelegate>{
-    LKHomeBannerView       * _homeBannerView;
+@interface LKHomeViewController ()<LKADScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>{
+    LKHomeBannerView        * _homeBannerView;
     UIScrollView            * _mScrollView;
-    LKADScrollView                  * _adScrollView;
+    LKADScrollView          * _adScrollView;
 
     UIView                  * _contentView;
+    UITableView             * mTableView;
 
 }
 @property (nonatomic,assign) CGRect                  mBannerImgVFrame;
@@ -47,22 +48,39 @@
 }
 
 - (void)createControllerView {
+    mTableView = [UITableView new];
+    mTableView.delegate = self;
+    mTableView.dataSource = self;
+    mTableView.showsVerticalScrollIndicator = NO;
+    mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:mTableView];
+
+
     _mScrollView = [UIScrollView new];
     _mScrollView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_mScrollView];
     [_mScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(@0);
         make.width.equalTo(@(SCREEN_WIDTH));
+        make.height.equalTo(@(SCREEN_HEIGHT - 49));
+    }];
+    _mScrollView.backgroundColor = [UIColor blueColor];
+    
+    _contentView = [UIView new];
+    [_mScrollView addSubview:_contentView];
+    [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(@0);
+        make.width.equalTo(@(SCREEN_WIDTH));
         make.height.equalTo(@(SCREEN_HEIGHT - 49 - 64));
     }];
     
-    _contentView = [UIView new];
-    _contentView.backgroundColor = COLOR_FOR_BACKGROUND_F2;
-    [_mScrollView addSubview:_contentView];
-    [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(_mScrollView);
-        make.width.equalTo(_mScrollView);
-    }];
+    _adScrollView = [[LKADScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, ADHeight)];
+    [_contentView addSubview:_adScrollView];
+//    [_adScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.top.equalTo(@0);
+//        make.width.equalTo(@(SCREEN_WIDTH));
+//        make.height.equalTo(@(SCREEN_WIDTH * 19.0f / 32.0f));
+//    }];
     
     //banner
 //    _homeBannerView = [LKHomeBannerView new];
@@ -113,7 +131,7 @@
 //    }];
     MJRefreshStateHeader *header = [MJRefreshStateHeader headerWithRefreshingBlock:^{
         [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshADDataAndWeatherData" object:nil];
-        [_adScrollView requestADImageInfo];
+//        [_adScrollView requestADImageInfo];
         
 //        [self getDynamicHome];
         [self getNetworkOfData];
@@ -175,9 +193,9 @@
             NSNumber * SNumber = [NSNumber numberWithFloat:scrollView.contentOffset.y];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"ADDropDown" object:SNumber];
             if (scrollView.contentOffset.y < 0) {
-                _adScrollView.mainPageControl.hidden = YES;
+//                _adScrollView.mainPageControl.hidden = YES;
             } else if (scrollView.contentOffset.y ==  0) {
-                _adScrollView.mainPageControl.hidden = NO;
+//                _adScrollView.mainPageControl.hidden = NO;
                 _adScrollView.frame = frame;
             }
             CGFloat ratio = (CGRectGetHeight(self.mBannerImgVFrame) + (-scrollView.contentOffset.y)) / CGRectGetHeight(self.mBannerImgVFrame);

@@ -69,7 +69,10 @@
     
     LKHomeViewController * homeVC = [LKHomeViewController new];
     UINavigationController * homeNC = [[UINavigationController alloc] initWithRootViewController:homeVC];
+//    homeNC.navigationBar.backgroundColor = [UIColor redColor];
 //    homeNC.navigationBarHidden = YES;
+    homeVC.title = @"首页";
+
     LKNewsViewController * newsVC = [LKNewsViewController new];
     UINavigationController * newsNC = [[UINavigationController alloc] initWithRootViewController:newsVC];
     newsVC.title = @"资讯";

@@ -17,8 +17,7 @@
 @interface LKADScrollView : UIView
 @property (nonatomic, strong) OPADView * mainImage;
 @property (nonatomic, strong) UIScrollView * mainScrollView;
-@property (nonatomic, strong) UIPageControl * mainPageControl;
 
 @property (nonatomic, weak) id <LKADScrollViewDelegate> delegate;
-- (void)requestADImageInfo;
+
 @end

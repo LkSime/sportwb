@@ -20,6 +20,9 @@ NSLocalizedString(key, nil)
 #define SCREEN_WIDTH            [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT           [UIScreen mainScreen].bounds.size.height
 
+//banner高度
+#define ADHeight (SCREEN_WIDTH * 2.0f / 3.0f)
+
 //暂时放这里，后续处理
 #define resizableImageWithImageName(name)  [[UIImage imageNamed:name] resizableImageWithCapInsets:UIEdgeInsetsMake([UIImage imageNamed:name].size.height * 0.5, [UIImage imageNamed:name].size.width * 0.5, [UIImage imageNamed:name].size.height * 0.5, [UIImage imageNamed:name].size.width * 0.5)]
 
