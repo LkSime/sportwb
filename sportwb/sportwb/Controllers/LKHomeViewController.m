@@ -7,20 +7,20 @@
 //
 
 #import "LKHomeViewController.h"
-#import "LKHomeBannerView.h"
 #import "LKSystemModel.h"
 #import "LKADScrollView.h"
+#import "LKTHomeMediaCell.h"
+#import "LKNewsModel.h"
+#import "LKNewsApi.h"
+#import "LKWebTrueViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AVKit/AVKit.h>
 
-@interface LKHomeViewController ()<LKADScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>{
-    LKHomeBannerView        * _homeBannerView;
-    UIScrollView            * _mScrollView;
+@interface LKHomeViewController ()<LKADScrollViewDelegate, UITableViewDelegate, UITableViewDataSource> {
     LKADScrollView          * _adScrollView;
-
-    UIView                  * _contentView;
     UITableView             * mTableView;
-
+    NSArray                 * mDataSource;
 }
-@property (nonatomic,assign) CGRect                  mBannerImgVFrame;
 
 @end
 
@@ -35,7 +35,6 @@
         UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"首页" image:unselectImage selectedImage:selectImage];
         item.selectedImage = [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         self.tabBarItem = item;
-        self.view.backgroundColor = [UIColor tangerineColor];
 
     }
     return self;
@@ -43,166 +42,80 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    mDataSource = [NSArray array];
+    
     [self createControllerView];
 }
 
 - (void)createControllerView {
-    mTableView = [UITableView new];
+    mTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     mTableView.delegate = self;
     mTableView.dataSource = self;
     mTableView.showsVerticalScrollIndicator = NO;
     mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    mTableView.backgroundColor = COLOR_FOR_BACKGROUND_F2;
     [self.view addSubview:mTableView];
-
-
-    _mScrollView = [UIScrollView new];
-    _mScrollView.showsVerticalScrollIndicator = NO;
-    [self.view addSubview:_mScrollView];
-    [_mScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(@0);
+    [mTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.equalTo(self.view);
         make.width.equalTo(@(SCREEN_WIDTH));
-        make.height.equalTo(@(SCREEN_HEIGHT - 49));
+        make.height.equalTo(@(SCREEN_HEIGHT - 64));
     }];
-    _mScrollView.backgroundColor = [UIColor blueColor];
-    
-    _contentView = [UIView new];
-    [_mScrollView addSubview:_contentView];
-    [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(@0);
-        make.width.equalTo(@(SCREEN_WIDTH));
-        make.height.equalTo(@(SCREEN_HEIGHT - 49 - 64));
-    }];
-    
+
     _adScrollView = [[LKADScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, ADHeight)];
-    [_contentView addSubview:_adScrollView];
-//    [_adScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.top.equalTo(@0);
-//        make.width.equalTo(@(SCREEN_WIDTH));
-//        make.height.equalTo(@(SCREEN_WIDTH * 19.0f / 32.0f));
-//    }];
+    mTableView.tableHeaderView = _adScrollView;
     
-    //banner
-//    _homeBannerView = [LKHomeBannerView new];
-//    [_contentView addSubview:_homeBannerView];
-//    [_homeBannerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.left.width.equalTo(_contentView);
-//        make.height.equalTo(_contentView.mas_width).multipliedBy(0.5);
-//    }];
-//    [_homeBannerView createBannerView];
-    //    [_homeBannerView loadBannerDatas:@[@"QQ", @"WX", @"WB"]];//, @"ZFB"]];
-    
-    //流量使用情况
-//    _dataMonitorView = [LKHomeDataMonitorView new];
-//    [_contentView addSubview:_dataMonitorView];
-//    [_dataMonitorView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(_homeBannerView.mas_bottom);
-//        make.left.width.equalTo(_contentView);
-//        make.height.equalTo(@217);
-//    }];
-//    [_dataMonitorView createDataMonitorView];
-//    [_dataMonitorView loadViewParam:nil];
-//
-//    _rechargeView = [LKHomeRechargeView new];
-//    CGFloat btW = (KSCREEN_WIDTH - 5)/4 * 1.5;
-//
-//    [_contentView addSubview:_rechargeView];
-//    [_rechargeView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(_dataMonitorView.mas_bottom).offset(6);
-//        make.left.width.equalTo(_contentView);
-//        make.height.equalTo(@(124 + btW));
-//    }];
-//    [_rechargeView createRechargeView];
-    
-    //常用软件
-//    NSArray * scArray = @[@"QQ", @"WX", @"WB", @"ZFB", @"JD"];
-//    _shortcutView = [LKHomeShortcutView new];
-//    [_contentView addSubview:_shortcutView];
-//    [_shortcutView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(_rechargeView.mas_bottom).offset(6);
-//        make.left.width.equalTo(_contentView);
-//        //        make.bottom.equalTo(self.view);
-//    }];
-//    [_shortcutView createShortcutView];
-//    [_shortcutView loadShortcutList:scArray];
-//
-//    [_contentView mas_updateConstraints:^(MASConstraintMaker *make) {
-//        make.bottom.equalTo(_shortcutView);
-//    }];
     MJRefreshStateHeader *header = [MJRefreshStateHeader headerWithRefreshingBlock:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshADDataAndWeatherData" object:nil];
-//        [_adScrollView requestADImageInfo];
-        
-//        [self getDynamicHome];
         [self getNetworkOfData];
-
     }];
 
     header.lastUpdatedTimeLabel.hidden = YES;
-    _mScrollView.mj_header = header;
+    mTableView.mj_header = header;
     [header beginRefreshing];
     
-    self.mBannerImgVFrame = _adScrollView.frame;
-
 }
 
 - (void)getNetworkOfData {
-
-    //TODO: 模拟数据
-    [_homeBannerView loadBannerDatas:[self testOfBannerData]];
-//    [_dataMonitorView loadViewParam:[self testOfFlowUsageInfo]];
-    
-    [_mScrollView.mj_header endRefreshing];
+    [[LKNewsApi shareInstance] getMediaListSuccessBlock:^(NSArray *mArray) {
+        mDataSource = [mArray copy];
+        [mTableView reloadData];
+    } withErrorBlock:^(NSString *errMsg, NSInteger errCode) {
+        
+    }];
+    [mTableView.mj_header endRefreshing];
 }
 
-#pragma mark - 模拟数据
-- (LKHomeBannerAdvertList *)testOfBannerData {
-    //TODO: 测试数据
-    LKHomeBannerAdvertList * listData = [LKHomeBannerAdvertList new];
-    LKHomeBannerAdvertModel * model_1 = [LKHomeBannerAdvertModel new];
-    model_1.aId = @"1";
-    model_1.title = @"广告_1";
-    model_1.url = @"http://xxxx.com/1.html";
-    model_1.imgUrl = @"http://7xkszy.com2.z0.glb.qiniucdn.com/pics/vol/580a6f544dfba.jpg?imageView2/1/w/640/h/452";
-    LKHomeBannerAdvertModel * model_2 = [LKHomeBannerAdvertModel new];
-    model_2.aId = @"2";
-    model_2.title = @"广告_2";
-    model_2.url = @"http://xxxx.com/1.html";
-    model_2.imgUrl = @"http://7xkszy.com2.z0.glb.qiniucdn.com/pics/vol/58051aeba7870.jpg?imageView2/1/w/640/h/452";
-    LKHomeBannerAdvertModel * model_3 = [LKHomeBannerAdvertModel new];
-    model_3.aId = @"3";
-    model_3.title = @"广告_3";
-    model_3.url = @"http://xxxx.com/1.html";
-    model_3.imgUrl = @"http://img-cdn.luoo.net/pics/vol/583b045d826cb.jpg?imageView2/1/w/640/h/452";
-    LKHomeBannerAdvertModel * model_4 = [LKHomeBannerAdvertModel new];
-    model_4.aId = @"4";
-    model_4.title = @"广告_4";
-    model_4.url = @"http://xxxx.com/1.html";
-    model_4.imgUrl = @"http://img-cdn.luoo.net/pics/vol/58406b4dd4509.jpg?imageView2/1/w/640/h/452";
-    listData.dataList = @[model_1, model_2, model_3, model_4];
-    
-    return listData;
+#pragma mark - UITableViewDelegate$DataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
-#pragma mark - 滚动视图代理
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    //主滚动图 下拉放大图片
-    if (scrollView.tag == 1) {
-        CGRect frame = _adScrollView.frame;
-        if (scrollView.contentOffset.y <= 0) {
-            NSNumber * SNumber = [NSNumber numberWithFloat:scrollView.contentOffset.y];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"ADDropDown" object:SNumber];
-            if (scrollView.contentOffset.y < 0) {
-//                _adScrollView.mainPageControl.hidden = YES;
-            } else if (scrollView.contentOffset.y ==  0) {
-//                _adScrollView.mainPageControl.hidden = NO;
-                _adScrollView.frame = frame;
-            }
-            CGFloat ratio = (CGRectGetHeight(self.mBannerImgVFrame) + (-scrollView.contentOffset.y)) / CGRectGetHeight(self.mBannerImgVFrame);
-            CGFloat deltaH = CGRectGetHeight(self.mBannerImgVFrame) * ratio - CGRectGetHeight(self.mBannerImgVFrame);
-            _adScrollView.frame = CGRectMake(0, - deltaH/2, SCREEN_WIDTH, CGRectGetHeight(self.mBannerImgVFrame) * ratio);
-        }
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return mDataSource.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return ADHeight + 70.0f;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString * mr_identifer = @"LKTHomeMediaCell";
+    LKTHomeMediaCell * cell = [tableView dequeueReusableCellWithIdentifier:mr_identifer];
+    if (cell == nil) {
+        cell = [[LKTHomeMediaCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:mr_identifer];
     }
+    [cell setMediaCellData:mDataSource[indexPath.row]];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    LKNewsSocialListModel * model = mDataSource[indexPath.row];
+    AVPlayerViewController * playerVC = [AVPlayerViewController new];
+    playerVC.player = [AVPlayer playerWithURL:[NSURL URLWithString:model.media]];
+    [self presentViewController:playerVC animated:YES completion:nil];
+    [playerVC.player play];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -210,14 +123,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

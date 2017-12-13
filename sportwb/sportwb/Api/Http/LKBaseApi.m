@@ -133,10 +133,10 @@
     if (!IsEmpty(params)) {
         dictParamsM = [params mutableCopy];
     }
-    [dictParamsM setObject:[LKParamsUtils getVersion] forKey:@"ver"];
-    [dictParamsM setObject:[LKParamsUtils getPlatform] forKey:@"platform"];
+//    [dictParamsM setObject:[LKParamsUtils getVersion] forKey:@"ver"];
+//    [dictParamsM setObject:[LKParamsUtils getPlatform] forKey:@"platform"];
 //    [dictParamsM setObject:[[LKUserInfoManager sharedInstance] token] forKey:@"token"];
-    [dictParamsM setObject:[LKParamsUtils getAppID] forKey:@"appid"];
+//    [dictParamsM setObject:[LKParamsUtils getAppID] forKey:@"appid"];
     [dic setValuesForKeysWithDictionary:dictParamsM];
 //    [dic setObject:[LKParamsUtils getTokenWithParams:dictParamsM] forKey:@"sign"];
     return dic;

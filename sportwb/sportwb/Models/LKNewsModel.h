@@ -17,4 +17,5 @@
 @property (nonatomic, copy) NSString * des; //网易VR
 @property (nonatomic, copy) NSString * picUrl;
 @property (nonatomic, copy) NSString * newsUrl; //http://tech.163.com/photoview/6PGI0009/15180.html
+@property (nonatomic, copy) NSString * media;
 @end

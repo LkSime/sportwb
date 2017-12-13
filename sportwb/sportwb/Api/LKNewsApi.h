@@ -21,4 +21,8 @@
                              withSuccessBlock:(void (^)(NSArray * mArray))successBlk
                                withErrorBlock:(ErrorBlock)errorBlk;
 
+
+-(NSURLSessionDataTask *)getMediaListSuccessBlock:(void (^)(NSArray * mArray))successBlk
+                                   withErrorBlock:(ErrorBlock)errorBlk;
+
 @end

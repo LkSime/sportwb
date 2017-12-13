@@ -11,7 +11,7 @@
 @class OPADView;
 
 @protocol LKADScrollViewDelegate <NSObject>
-- (void)skipWeatherView;
+//- (void)skipWeatherView;
 @end
 
 @interface LKADScrollView : UIView

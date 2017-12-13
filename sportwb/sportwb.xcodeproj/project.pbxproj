@@ -20,12 +20,13 @@
 		6A350D6C1FDE54A600DF62F3 /* LKNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D6B1FDE54A600DF62F3 /* LKNewsViewController.m */; };
 		6A350D6F1FDE54AE00DF62F3 /* LKMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D6E1FDE54AE00DF62F3 /* LKMineViewController.m */; };
 		6A350D8E1FDE6FC100DF62F3 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D8D1FDE6FC100DF62F3 /* pinyin.c */; };
-		6A350D951FDE7A4F00DF62F3 /* LKHomeBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D941FDE7A4F00DF62F3 /* LKHomeBannerView.m */; };
 		6A350D981FDE82E700DF62F3 /* LKADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D971FDE82E700DF62F3 /* LKADScrollView.m */; };
 		6A350D9B1FDE834300DF62F3 /* OPADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350D9A1FDE834300DF62F3 /* OPADView.m */; };
 		6A350DA11FDE839700DF62F3 /* OPADViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A350DA01FDE839700DF62F3 /* OPADViewButton.m */; };
 		6A6ACC8D1FDFC4CE0078F839 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACC8C1FDFC4CE0078F839 /* UIUtils.m */; };
 		6A6ACC901FDFC68E0078F839 /* LKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACC8F1FDFC68E0078F839 /* LKLoginViewController.m */; };
+		6A6ACC931FE0C0DC0078F839 /* LKTHomeMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACC921FE0C0DC0078F839 /* LKTHomeMediaCell.m */; };
+		6A6ACC9A1FE123690078F839 /* LKNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACC991FE123690078F839 /* LKNewsCell.m */; };
 		6AF601C21FD92148008A97AF /* LKBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C11FD92148008A97AF /* LKBaseApi.m */; };
 		6AF601C51FD92292008A97AF /* LKCommonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C41FD92292008A97AF /* LKCommonDataModel.m */; };
 		6AF601CD1FD92797008A97AF /* LKParamsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601CC1FD92797008A97AF /* LKParamsUtils.m */; };
@@ -95,8 +96,6 @@
 		6A350D6E1FDE54AE00DF62F3 /* LKMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKMineViewController.m; sourceTree = "<group>"; };
 		6A350D8C1FDE6FC100DF62F3 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
 		6A350D8D1FDE6FC100DF62F3 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
-		6A350D931FDE7A4F00DF62F3 /* LKHomeBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKHomeBannerView.h; sourceTree = "<group>"; };
-		6A350D941FDE7A4F00DF62F3 /* LKHomeBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKHomeBannerView.m; sourceTree = "<group>"; };
 		6A350D961FDE82E700DF62F3 /* LKADScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKADScrollView.h; sourceTree = "<group>"; };
 		6A350D971FDE82E700DF62F3 /* LKADScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKADScrollView.m; sourceTree = "<group>"; };
 		6A350D991FDE834300DF62F3 /* OPADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPADView.h; sourceTree = "<group>"; };
@@ -107,6 +106,10 @@
 		6A6ACC8C1FDFC4CE0078F839 /* UIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
 		6A6ACC8E1FDFC68E0078F839 /* LKLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKLoginViewController.h; sourceTree = "<group>"; };
 		6A6ACC8F1FDFC68E0078F839 /* LKLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKLoginViewController.m; sourceTree = "<group>"; };
+		6A6ACC911FE0C0DC0078F839 /* LKTHomeMediaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKTHomeMediaCell.h; sourceTree = "<group>"; };
+		6A6ACC921FE0C0DC0078F839 /* LKTHomeMediaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKTHomeMediaCell.m; sourceTree = "<group>"; };
+		6A6ACC981FE123690078F839 /* LKNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKNewsCell.h; sourceTree = "<group>"; };
+		6A6ACC991FE123690078F839 /* LKNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKNewsCell.m; sourceTree = "<group>"; };
 		6AF601BF1FD91D2D008A97AF /* ApiUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiUrl.h; sourceTree = "<group>"; };
 		6AF601C01FD92148008A97AF /* LKBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKBaseApi.h; sourceTree = "<group>"; };
 		6AF601C11FD92148008A97AF /* LKBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKBaseApi.m; sourceTree = "<group>"; };
@@ -221,16 +224,25 @@
 		6A350D921FDE79D800DF62F3 /* HomeViews */ = {
 			isa = PBXGroup;
 			children = (
-				6A350D931FDE7A4F00DF62F3 /* LKHomeBannerView.h */,
-				6A350D941FDE7A4F00DF62F3 /* LKHomeBannerView.m */,
 				6A350D961FDE82E700DF62F3 /* LKADScrollView.h */,
 				6A350D971FDE82E700DF62F3 /* LKADScrollView.m */,
 				6A350D991FDE834300DF62F3 /* OPADView.h */,
 				6A350D9A1FDE834300DF62F3 /* OPADView.m */,
 				6A350D9F1FDE839700DF62F3 /* OPADViewButton.h */,
 				6A350DA01FDE839700DF62F3 /* OPADViewButton.m */,
+				6A6ACC911FE0C0DC0078F839 /* LKTHomeMediaCell.h */,
+				6A6ACC921FE0C0DC0078F839 /* LKTHomeMediaCell.m */,
 			);
 			path = HomeViews;
+			sourceTree = "<group>";
+		};
+		6A6ACC971FE123500078F839 /* NewsViews */ = {
+			isa = PBXGroup;
+			children = (
+				6A6ACC981FE123690078F839 /* LKNewsCell.h */,
+				6A6ACC991FE123690078F839 /* LKNewsCell.m */,
+			);
+			path = NewsViews;
 			sourceTree = "<group>";
 		};
 		6AF601BA1FD91C60008A97AF /* Api */ = {
@@ -394,6 +406,7 @@
 		6AF602001FD93CC8008A97AF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6A6ACC971FE123500078F839 /* NewsViews */,
 				6A350D921FDE79D800DF62F3 /* HomeViews */,
 			);
 			path = Views;
@@ -794,6 +807,7 @@
 				6AF601E81FD92DA4008A97AF /* SDTransparentPieProgressView.m in Sources */,
 				6AF601F71FD930EB008A97AF /* RootNaviControllerUtil.m in Sources */,
 				6AF601F01FD92EB2008A97AF /* UIViewController+Navbar.m in Sources */,
+				6A6ACC9A1FE123690078F839 /* LKNewsCell.m in Sources */,
 				6A6ACC8D1FDFC4CE0078F839 /* UIUtils.m in Sources */,
 				6A6ACC901FDFC68E0078F839 /* LKLoginViewController.m in Sources */,
 				6AF601FD1FD93775008A97AF /* UIColor+FlatUI.m in Sources */,
@@ -803,7 +817,6 @@
 				6A350DA11FDE839700DF62F3 /* OPADViewButton.m in Sources */,
 				6AF601D31FD92B1B008A97AF /* LKSystemInfoApi.m in Sources */,
 				6A350D6C1FDE54A600DF62F3 /* LKNewsViewController.m in Sources */,
-				6A350D951FDE7A4F00DF62F3 /* LKHomeBannerView.m in Sources */,
 				6A350D6F1FDE54AE00DF62F3 /* LKMineViewController.m in Sources */,
 				6AF601E61FD92DA4008A97AF /* SDBallProgressView.m in Sources */,
 				6A350D661FDA9B1600DF62F3 /* LKBaseViewController.m in Sources */,
@@ -812,6 +825,7 @@
 				6AF601E71FD92DA4008A97AF /* SDLoopProgressView.m in Sources */,
 				6A350D981FDE82E700DF62F3 /* LKADScrollView.m in Sources */,
 				6A350D691FDE549B00DF62F3 /* LKHomeViewController.m in Sources */,
+				6A6ACC931FE0C0DC0078F839 /* LKTHomeMediaCell.m in Sources */,
 				BC9878F91FD851A8001D6CA0 /* main.m in Sources */,
 				6A350D651FDA9B1600DF62F3 /* LKBaseWebViewController.m in Sources */,
 				6AF601E91FD92DA4008A97AF /* SDPieProgressView.m in Sources */,

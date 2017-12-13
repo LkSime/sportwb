@@ -18,7 +18,8 @@
              @"title":@"title",
              @"des":@"description",
              @"picUrl":@"picUrl",
-             @"newsUrl":@"url"
+             @"newsUrl":@"url",
+             @"media":@"meida"
              };
 }
 @end
