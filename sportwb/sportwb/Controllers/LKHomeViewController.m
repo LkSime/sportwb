@@ -80,7 +80,7 @@
         mDataSource = [mArray copy];
         [mTableView reloadData];
     } withErrorBlock:^(NSString *errMsg, NSInteger errCode) {
-        
+        NSLog(errMsg);
     }];
     [mTableView.mj_header endRefreshing];
 }

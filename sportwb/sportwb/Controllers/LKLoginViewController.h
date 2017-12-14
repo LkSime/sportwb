@@ -7,7 +7,8 @@
 //
 
 #import "LKBaseViewController.h"
+#import "MMViewController.h"
 
-@interface LKLoginViewController : LKBaseViewController
+@interface LKLoginViewController : MMViewController
 
 @end

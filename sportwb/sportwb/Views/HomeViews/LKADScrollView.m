@@ -9,7 +9,7 @@
 #import "LKADScrollView.h"
 #import "OPADView.h"
 #import "UIImageView+WebCache.h"
-#import "LKBaseWebViewController.h"
+#import "LKWebTrueViewController.h"
 
 
 @interface LKADScrollView ()<UIScrollViewDelegate> {
@@ -97,9 +97,10 @@
 }
 #pragma mark -- 点击广告页
 - (void)clickADView:(OPADViewButton *)button {
-        LKBaseWebViewController *detailVC = [[LKBaseWebViewController alloc] init];
-        detailVC.webURL = button.adUrl;
-        [RootNaviControllerUtil pushViewController:detailVC animated:YES];
+    LKWebTrueViewController *detailVC = [[LKWebTrueViewController alloc] init];
+    detailVC.webURL = button.adUrl;
+    detailVC.title = @"体坛快讯";
+    [UIUtils pushVC:detailVC];
 }
 
 #pragma mark - scrollview delegate

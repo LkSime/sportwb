@@ -35,10 +35,24 @@
     
     //参数处理
     paramsDic = [self createParams:paramsDic];
+
+#ifdef DEBUG
+    NSString *paramsStr = @"";
+    for (NSString *key in paramsDic) {
+        paramsStr = [NSString stringWithFormat:@"%@=%@&%@",key,[paramsDic objectForKey:key],paramsStr];
+    }
+    NSString *requestUrl = [NSString stringWithFormat:@"%@?%@",url,paramsStr];
+    NSLog(@"用户端请求URL ： %@",requestUrl);
+#endif
     
     NSURLSessionDataTask *dataTask = nil;
     @try {
-        [[AFAppClient shared]GET:url parameters:paramsDic
+            //先截取字符串，拿到第一个字符
+//            NSString *firstStr = [url substringToIndex:1];
+//            if (![@"/"isEqualToString:firstStr]) {
+//                url = [NSString stringWithFormat:@"/%@",url];
+//            }
+       dataTask = [[AFAppClient shared]GET:url parameters:paramsDic
                         progress:downloadProgress
                          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                              //成功处理
@@ -82,8 +96,22 @@
     //参数处理
     paramsDic = [self createParams:paramsDic];
     
+#ifdef DEBUG
+    NSString *paramsStr = @"";
+    for (NSString *key in paramsDic) {
+        paramsStr = [NSString stringWithFormat:@"%@=%@&%@",key,[paramsDic objectForKey:key],paramsStr];
+    }
+    NSString *requestUrl = [NSString stringWithFormat:@"%@?%@",url,paramsStr];
+    NSLog(@"用户端请求URL ： %@",requestUrl);
+#endif
+    
     NSURLSessionDataTask *dataTask = nil;
     @try {
+        //先截取字符串，拿到第一个字符
+//        NSString *firstStr = [url substringToIndex:1];
+//        if (![@"/"isEqualToString:firstStr]) {
+//            url = [NSString stringWithFormat:@"/%@",url];
+//        }
         dataTask = [[AFAppClient shared] POST:url
                                    parameters:paramsDic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
                                        //上传文件

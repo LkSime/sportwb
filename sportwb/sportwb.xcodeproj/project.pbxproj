@@ -27,6 +27,12 @@
 		6A6ACC901FDFC68E0078F839 /* LKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACC8F1FDFC68E0078F839 /* LKLoginViewController.m */; };
 		6A6ACC931FE0C0DC0078F839 /* LKTHomeMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACC921FE0C0DC0078F839 /* LKTHomeMediaCell.m */; };
 		6A6ACC9A1FE123690078F839 /* LKNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACC991FE123690078F839 /* LKNewsCell.m */; };
+		6A6ACC9E1FE25F090078F839 /* MMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACC9D1FE25F090078F839 /* MMViewController.m */; };
+		6A6ACCA31FE260DE0078F839 /* PublicInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACC9F1FE260DD0078F839 /* PublicInfomation.m */; };
+		6A6ACCA41FE260DE0078F839 /* PublicFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCA21FE260DE0078F839 /* PublicFunction.m */; };
+		6A6ACCAC1FE2751A0078F839 /* OPMyBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCA71FE275180078F839 /* OPMyBottomView.m */; };
+		6A6ACCAD1FE2751A0078F839 /* OPMyBottomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCA81FE275190078F839 /* OPMyBottomViewCell.m */; };
+		6A6ACCAE1FE2751A0078F839 /* OPMyTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCAA1FE275190078F839 /* OPMyTopView.m */; };
 		6AF601C21FD92148008A97AF /* LKBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C11FD92148008A97AF /* LKBaseApi.m */; };
 		6AF601C51FD92292008A97AF /* LKCommonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C41FD92292008A97AF /* LKCommonDataModel.m */; };
 		6AF601CD1FD92797008A97AF /* LKParamsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601CC1FD92797008A97AF /* LKParamsUtils.m */; };
@@ -110,6 +116,18 @@
 		6A6ACC921FE0C0DC0078F839 /* LKTHomeMediaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKTHomeMediaCell.m; sourceTree = "<group>"; };
 		6A6ACC981FE123690078F839 /* LKNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKNewsCell.h; sourceTree = "<group>"; };
 		6A6ACC991FE123690078F839 /* LKNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKNewsCell.m; sourceTree = "<group>"; };
+		6A6ACC9C1FE25F090078F839 /* MMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMViewController.h; sourceTree = "<group>"; };
+		6A6ACC9D1FE25F090078F839 /* MMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMViewController.m; sourceTree = "<group>"; };
+		6A6ACC9F1FE260DD0078F839 /* PublicInfomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicInfomation.m; sourceTree = "<group>"; };
+		6A6ACCA01FE260DD0078F839 /* PublicInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicInfomation.h; sourceTree = "<group>"; };
+		6A6ACCA11FE260DD0078F839 /* PublicFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicFunction.h; sourceTree = "<group>"; };
+		6A6ACCA21FE260DE0078F839 /* PublicFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicFunction.m; sourceTree = "<group>"; };
+		6A6ACCA61FE275180078F839 /* OPMyBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMyBottomView.h; sourceTree = "<group>"; };
+		6A6ACCA71FE275180078F839 /* OPMyBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMyBottomView.m; sourceTree = "<group>"; };
+		6A6ACCA81FE275190078F839 /* OPMyBottomViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMyBottomViewCell.m; sourceTree = "<group>"; };
+		6A6ACCA91FE275190078F839 /* OPMyTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMyTopView.h; sourceTree = "<group>"; };
+		6A6ACCAA1FE275190078F839 /* OPMyTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMyTopView.m; sourceTree = "<group>"; };
+		6A6ACCAB1FE2751A0078F839 /* OPMyBottomViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMyBottomViewCell.h; sourceTree = "<group>"; };
 		6AF601BF1FD91D2D008A97AF /* ApiUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiUrl.h; sourceTree = "<group>"; };
 		6AF601C01FD92148008A97AF /* LKBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKBaseApi.h; sourceTree = "<group>"; };
 		6AF601C11FD92148008A97AF /* LKBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKBaseApi.m; sourceTree = "<group>"; };
@@ -245,6 +263,28 @@
 			path = NewsViews;
 			sourceTree = "<group>";
 		};
+		6A6ACC9B1FE25F090078F839 /* MMViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6A6ACC9C1FE25F090078F839 /* MMViewController.h */,
+				6A6ACC9D1FE25F090078F839 /* MMViewController.m */,
+			);
+			path = MMViewController;
+			sourceTree = "<group>";
+		};
+		6A6ACCA51FE274FF0078F839 /* MineViews */ = {
+			isa = PBXGroup;
+			children = (
+				6A6ACCA61FE275180078F839 /* OPMyBottomView.h */,
+				6A6ACCA71FE275180078F839 /* OPMyBottomView.m */,
+				6A6ACCAB1FE2751A0078F839 /* OPMyBottomViewCell.h */,
+				6A6ACCA81FE275190078F839 /* OPMyBottomViewCell.m */,
+				6A6ACCA91FE275190078F839 /* OPMyTopView.h */,
+				6A6ACCAA1FE275190078F839 /* OPMyTopView.m */,
+			);
+			path = MineViews;
+			sourceTree = "<group>";
+		};
 		6AF601BA1FD91C60008A97AF /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +334,10 @@
 				6AF601CC1FD92797008A97AF /* LKParamsUtils.m */,
 				6AF601F51FD930EB008A97AF /* RootNaviControllerUtil.h */,
 				6AF601F61FD930EB008A97AF /* RootNaviControllerUtil.m */,
+				6A6ACCA11FE260DD0078F839 /* PublicFunction.h */,
+				6A6ACCA21FE260DE0078F839 /* PublicFunction.m */,
+				6A6ACCA01FE260DD0078F839 /* PublicInfomation.h */,
+				6A6ACC9F1FE260DD0078F839 /* PublicInfomation.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -377,6 +421,7 @@
 		6AF601FE1FD93CC7008A97AF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6A6ACC9B1FE25F090078F839 /* MMViewController */,
 				6A350D601FDA9B1500DF62F3 /* BaseViewController */,
 				6A350D5D1FDA8FC500DF62F3 /* LKWebTrueViewController.h */,
 				6A350D5E1FDA8FC500DF62F3 /* LKWebTrueViewController.m */,
@@ -406,6 +451,7 @@
 		6AF602001FD93CC8008A97AF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6A6ACCA51FE274FF0078F839 /* MineViews */,
 				6A6ACC971FE123500078F839 /* NewsViews */,
 				6A350D921FDE79D800DF62F3 /* HomeViews */,
 			);
@@ -803,6 +849,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6ACCA41FE260DE0078F839 /* PublicFunction.m in Sources */,
 				6A350D8E1FDE6FC100DF62F3 /* pinyin.c in Sources */,
 				6AF601E81FD92DA4008A97AF /* SDTransparentPieProgressView.m in Sources */,
 				6AF601F71FD930EB008A97AF /* RootNaviControllerUtil.m in Sources */,
@@ -813,12 +860,14 @@
 				6AF601FD1FD93775008A97AF /* UIColor+FlatUI.m in Sources */,
 				6AF601EB1FD92DA4008A97AF /* SDPieLoopProgressView.m in Sources */,
 				6AF601D01FD92957008A97AF /* StringUtils.m in Sources */,
+				6A6ACCAC1FE2751A0078F839 /* OPMyBottomView.m in Sources */,
 				BC9878EE1FD851A8001D6CA0 /* ViewController.m in Sources */,
 				6A350DA11FDE839700DF62F3 /* OPADViewButton.m in Sources */,
 				6AF601D31FD92B1B008A97AF /* LKSystemInfoApi.m in Sources */,
 				6A350D6C1FDE54A600DF62F3 /* LKNewsViewController.m in Sources */,
 				6A350D6F1FDE54AE00DF62F3 /* LKMineViewController.m in Sources */,
 				6AF601E61FD92DA4008A97AF /* SDBallProgressView.m in Sources */,
+				6A6ACCA31FE260DE0078F839 /* PublicInfomation.m in Sources */,
 				6A350D661FDA9B1600DF62F3 /* LKBaseViewController.m in Sources */,
 				6A350D5F1FDA8FC500DF62F3 /* LKWebTrueViewController.m in Sources */,
 				6A350D551FDA6AAD00DF62F3 /* LKNewsModel.m in Sources */,
@@ -827,6 +876,7 @@
 				6A350D691FDE549B00DF62F3 /* LKHomeViewController.m in Sources */,
 				6A6ACC931FE0C0DC0078F839 /* LKTHomeMediaCell.m in Sources */,
 				BC9878F91FD851A8001D6CA0 /* main.m in Sources */,
+				6A6ACC9E1FE25F090078F839 /* MMViewController.m in Sources */,
 				6A350D651FDA9B1600DF62F3 /* LKBaseWebViewController.m in Sources */,
 				6AF601E91FD92DA4008A97AF /* SDPieProgressView.m in Sources */,
 				6A350D4F1FDA616900DF62F3 /* AFAppClient.m in Sources */,
@@ -834,11 +884,13 @@
 				6A350D521FDA694C00DF62F3 /* LKNewsApi.m in Sources */,
 				6AF601C51FD92292008A97AF /* LKCommonDataModel.m in Sources */,
 				6A350D9B1FDE834300DF62F3 /* OPADView.m in Sources */,
+				6A6ACCAE1FE2751A0078F839 /* OPMyTopView.m in Sources */,
 				6AF601CD1FD92797008A97AF /* LKParamsUtils.m in Sources */,
 				6AF601E51FD92DA4008A97AF /* SDRotationLoopProgressView.m in Sources */,
 				6AF601C21FD92148008A97AF /* LKBaseApi.m in Sources */,
 				6AF602071FD9406A008A97AF /* LKDataDictionaryManager.m in Sources */,
 				6AF601EA1FD92DA4008A97AF /* SDBaseProgressView.m in Sources */,
+				6A6ACCAD1FE2751A0078F839 /* OPMyBottomViewCell.m in Sources */,
 				6AF602031FD93E9C008A97AF /* LKSystemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1005,7 +1057,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C888TR58A;
+				DEVELOPMENT_TEAM = 8S35C9ZJNC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sportwb/Supporting Files/PrefixHeader.pch";
@@ -1026,7 +1078,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C888TR58A;
+				DEVELOPMENT_TEAM = 8S35C9ZJNC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sportwb/Supporting Files/PrefixHeader.pch";

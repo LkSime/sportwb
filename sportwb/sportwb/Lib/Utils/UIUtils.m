@@ -27,12 +27,12 @@
 
 + (void)popViewControllerAnimated:(BOOL)animated {
     AppDelegate *aDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
-    [aDelegate.rootNavigation popViewControllerAnimated:animated];
+    [aDelegate.navRoot popViewControllerAnimated:animated];
 }
 
 +(UIViewController *)getCurrentVC{
     AppDelegate *aDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
-    return [aDelegate.rootNavigation topViewController];
+    return [aDelegate.navRoot topViewController];
 }
 
 +(void)presentTransparentVC:(UIViewController *)vc{
@@ -44,9 +44,9 @@
     if (IOS8_OR_LATER) {
         vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     }else{
-        aDelegate.rootNavigation.modalPresentationStyle = UIModalPresentationCurrentContext;
+        aDelegate.navRoot.modalPresentationStyle = UIModalPresentationCurrentContext;
     }
-    [aDelegate.rootNavigation presentViewController:vc animated:YES completion:nil];
+    [aDelegate.navRoot presentViewController:vc animated:YES completion:nil];
 }
 
 +(void)pushVC:(NSString*)vcName withParam:(NSDictionary *)paramDic{
@@ -62,7 +62,7 @@
         }
     }
     AppDelegate *aDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
-    [aDelegate.rootNavigation pushViewController:myObj animated:YES];
+    [aDelegate.navRoot pushViewController:myObj animated:YES];
 }
 
 

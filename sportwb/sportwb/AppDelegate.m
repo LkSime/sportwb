@@ -15,6 +15,7 @@
 #import "LKHomeViewController.h"
 #import "LKNewsViewController.h"
 #import "LKMineViewController.h"
+#import "LKLoginViewController.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
@@ -52,38 +53,24 @@
 //创建webviewcontroller
 - (void)createTrueView:(NSString *)sURL {
     LKWebTrueViewController * webVC = [LKWebTrueViewController new];
-    webVC.webTitle = @"xxx";
+    webVC.title = @"xxx";
     webVC.webURL = sURL;
-    self.rootNavigation = [[UINavigationController alloc] init];
+    self.navRoot = [[UINavigationController alloc] init];
 
-    self.window.rootViewController = self.rootNavigation;
+    self.window.rootViewController = self.navRoot;
     [self.window makeKeyAndVisible];
-    [RootNaviControllerUtil pushViewController:webVC animated:YES];
+    [UIUtils pushVC:webVC];
 }
 
 //创建常规界面
 - (void)createDefaultView {
-    UITabBarController * tabBarController = [UITabBarController new];
-    tabBarController.delegate = self;
-    self.window.rootViewController = tabBarController;
-    
-    LKHomeViewController * homeVC = [LKHomeViewController new];
-    UINavigationController * homeNC = [[UINavigationController alloc] initWithRootViewController:homeVC];
-//    homeNC.navigationBar.backgroundColor = [UIColor redColor];
-//    homeNC.navigationBarHidden = YES;
-    homeVC.title = @"首页";
-
-    LKNewsViewController * newsVC = [LKNewsViewController new];
-    UINavigationController * newsNC = [[UINavigationController alloc] initWithRootViewController:newsVC];
-    newsVC.title = @"资讯";
-//    newsNC.navigationBarHidden = YES;
-    LKMineViewController * mineVC = [LKMineViewController new];
-    UINavigationController * mineNC = [[UINavigationController alloc] initWithRootViewController:mineVC];
-    mineVC.title = @"我的";
-//    mineNC.navigationBarHidden = YES;
-    
-    tabBarController.viewControllers = [NSMutableArray arrayWithObjects:homeNC, newsNC, mineNC, nil];
-    tabBarController.tabBar.tintColor = NAV_COLOR;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    LKLoginViewController * loginVC = [LKLoginViewController new];
+    _navRoot = [UINavigationController new];
+    _navRoot.navigationBarHidden = YES;
+    [_navRoot pushViewController:loginVC animated:YES];
+    self.window.rootViewController = _navRoot;
+    [self.window makeKeyAndVisible];
     
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -63,7 +63,7 @@
     [header beginRefreshing];
     mTableView.mj_header = header;
     mTableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTableView)];
-//    mTableView.mj_footer.hidden = YES;
+    mTableView.mj_footer.hidden = YES;
 }
 
 -(void)refreshTableView{
@@ -94,7 +94,7 @@
         
         [mTableView reloadData];
     } withErrorBlock:^(NSString *errMsg, NSInteger errCode) {
-        
+        NSLog(@"%@", errMsg);
     }];
     [mTableView.mj_header endRefreshing];
     
@@ -110,7 +110,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return SCREEN_WIDTH / 2 + 40.0f;
+    return SCREEN_WIDTH * 0.4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -121,6 +121,19 @@
     }
     [cell setNewsCellData:mDataSource[indexPath.row]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    LKNewsSocialListModel * model = mDataSource[indexPath.row];
+    LKWebTrueViewController * web = [LKWebTrueViewController new];
+    web.webURL = model.newsUrl;
+    if (model.title.length > 10) {
+       model.title = [NSString stringWithFormat:@"%@...", [model.title substringToIndex:10]];
+    }
+    web.title = model.title;
+    [UIUtils pushVC:web];
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

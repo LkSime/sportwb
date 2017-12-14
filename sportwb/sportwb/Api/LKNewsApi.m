@@ -28,10 +28,11 @@
                                withErrorBlock:(ErrorBlock)errorBlk {
     
     NSMutableDictionary *params = [NSMutableDictionary new];
+    [params setObject:@"11e76634e4cc7ef5142c1ea90afe629a" forKey:@"key"];
     [params setObject:[NSString stringWithFormat:@"%ld",page_index] forKey:@"page"];
     [params setObject:[NSString stringWithFormat:@"%ld",page_size] forKey:@"num"];
-    [params setObject:@"11e76634e4cc7ef5142c1ea90afe629a" forKey:@"key"];
-    return [self postWithUrl:APIPOST_News_Social params:params success:^(id data,LKCommonDataModel *dataModel) {
+    NSString * URL = [NSString stringWithFormat:@"%@?key=11e76634e4cc7ef5142c1ea90afe629a&page=%ld&num=10", APIPOST_News_Social, page_index];
+    return [self postWithUrl:URL params:nil success:^(id data,LKCommonDataModel *dataModel) {
         
         NSError *error = nil;
         NSArray *arr = [MTLJSONAdapter modelsOfClass:LKNewsSocialListModel.class fromJSONArray:(NSArray*)data error:&error];

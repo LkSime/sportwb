@@ -15,6 +15,7 @@ target 'sportwb' do
 	pod ‘Reveal-SDK‘, ‘~> 4‘, :configurations => [‘Debug‘]
 	pod 'KissXML', '5.0'
     pod 'SDWebImage', '3.8.1'
+    pod 'MMDrawerController', '~> 0.5.7'
 
 target 'sportwbTests' do
     inherit! :search_paths

@@ -11,7 +11,7 @@
 @interface LKBaseWebViewController : LKBaseViewController
 
 @property (nonatomic, copy  ) NSString  * webURL;
-@property (nonatomic, copy  ) NSString  * webTitle;
+//@property (nonatomic, copy  ) NSString  * webTitle;
 @property (nonatomic, strong) UIWebView * mWebView;
 ///是否是一级界面
 @property (nonatomic, assign) BOOL        isFirst;

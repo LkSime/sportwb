@@ -7,8 +7,15 @@
 //
 
 #import "LKMineViewController.h"
+#import "OPMyTopView.h"
+#import "OPMyBottomView.h"
+#import "OPMyBottomViewCell.h"
 
-@interface LKMineViewController ()
+@interface LKMineViewController () {
+    OPMyTopView             * _myTopView;
+    OPMyBottomView          * _myBottomView;
+
+}
 
 @end
 
@@ -31,7 +38,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self createView];
+}
+- (void)createView {
+//    _scrlView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.mmContentView.frame.size.width, self.mmContentView.frame.size.height)];
+//    _scrlView.showsVerticalScrollIndicator = NO;
+//    [_scrlView setContentSize:CGSizeMake(self.mmContentView.frame.size.width, self.mmContentView.frame.size.height)];
+//    [self.mmContentView addSubview:_scrlView];
+    
+    _myTopView = [[OPMyTopView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+    [_myTopView.viewButton addTarget:self action:@selector(pushUserInfoView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_myTopView];
+    
+    _myBottomView = [[OPMyBottomView alloc] initWithFrame:CGRectMake(0, BottomForView(_myTopView) + 10, SCREEN_WIDTH, 500)];
+    [self.view addSubview:_myBottomView];
+//    [_scrlView setContentSize:CGSizeMake(self.mmContentView.frame.size.width, BottomForView(_myBottomView) + 2)];
 }
 
 - (void)didReceiveMemoryWarning {

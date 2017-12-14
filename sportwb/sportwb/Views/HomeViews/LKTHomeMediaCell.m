@@ -29,12 +29,21 @@
 }
 
 - (void)createView {
+    UIView * spaceView = [UIView new];
+    spaceView.backgroundColor = COLOR_FOR_BACKGROUND_F2;
+    [self addSubview:spaceView];
+    [spaceView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.equalTo(self);
+        make.height.equalTo(@(10));
+    }];
+    
     titleLabel = [UILabel new];
     titleLabel.font = FONT_FOR_TEXT_16;
     titleLabel.textColor = COLOR_FOR_TEXT_4D;
     [self addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.equalTo(@10);
+        make.top.equalTo(spaceView.mas_bottom).offset(10);
+        make.left.equalTo(@10);
         make.height.equalTo(@(20));
     }];
     
@@ -52,7 +61,7 @@
     channelLabel.textColor = COLOR_FOR_TEXT_80;
     [self addSubview:channelLabel];
     [channelLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(mImageView.mas_bottom).offset(15);
+        make.top.equalTo(mImageView.mas_bottom).offset(8);
         make.left.equalTo(@(10));
         make.height.equalTo(@(16));
     }];

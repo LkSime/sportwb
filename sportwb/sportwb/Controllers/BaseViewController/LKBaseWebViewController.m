@@ -30,13 +30,14 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = COLOR_FOR_BACKGROUND_F2;
-    [self setNavigationTitle:_webTitle];
     _paramsDictionary = [NSDictionary dictionary];
     [self createView];
     [self initNavBarItem];
 }
 
 - (void)createView {
+//    self.navigationController.title = _webTitle;
+    
     self.mWebView = [UIWebView new];
     self.mWebView.delegate = self;
     self.mWebView.backgroundColor = COLOR_FOR_BACKGROUND_F2;

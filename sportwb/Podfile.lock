@@ -20,6 +20,18 @@ PODS:
   - Mantle/extobjc (2.1.0)
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.1)
+  - MMDrawerController (0.5.7):
+    - MMDrawerController/Core (= 0.5.7)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
+    - MMDrawerController/MMDrawerVisualStates (= 0.5.7)
+    - MMDrawerController/Subclass (= 0.5.7)
+  - MMDrawerController/Core (0.5.7)
+  - MMDrawerController/MMDrawerBarButtonItem (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.5.7):
+    - MMDrawerController/Core
   - Reveal-SDK (4)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
@@ -32,6 +44,7 @@ DEPENDENCIES:
   - Mantle
   - Masonry
   - MJRefresh
+  - MMDrawerController (~> 0.5.7)
   - Reveal-SDK (~> 4)
   - SDWebImage (= 3.8.1)
   - SVProgressHUD
@@ -42,10 +55,11 @@ SPEC CHECKSUMS:
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
   Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: 24a82b4aae99e0eaed5c501d54a69e97c18f5e41
+PODFILE CHECKSUM: 51d86477110b0c384a75ddb2d2fb71264853a290
 
 COCOAPODS: 1.3.1
