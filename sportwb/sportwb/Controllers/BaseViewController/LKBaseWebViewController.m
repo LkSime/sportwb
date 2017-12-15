@@ -36,7 +36,6 @@
 }
 
 - (void)createView {
-//    self.navigationController.title = _webTitle;
     
     self.mWebView = [UIWebView new];
     self.mWebView.delegate = self;

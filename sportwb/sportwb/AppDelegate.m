@@ -33,21 +33,18 @@
 
 //应用伪装开光:返回
 - (void)applicationDisguise {
-    __weak __typeof(self) weakSelf = self;
-    [[LKSystemInfoApi shareInstance] getApplictionDisguiseWithSuccessBlock:^(LKSystemBaseModel *model) {
-        [weakSelf createDefaultView];
-//        [weakSelf createTrueView:model.switchUrl];
-    } failure:^(NSString *errMsg, NSInteger errCode) {
-        NSLog(errMsg, errCode);
-        [weakSelf createDefaultView];
-    }];
-    
-//    [[LKNewsApi shareInstance] getSocialOfNewsIndex:1 page_size:10 withSuccessBlock:^(NSArray *mArray) {
-//        NSArray * aaa = mArray;
-//        NSLog(@"%@", aaa);
-//    } withErrorBlock:^(NSString *errMsg, NSInteger errCode) {
-//
+    [self createDefaultView];
+
+//    __weak __typeof(self) weakSelf = self;
+//    [[LKSystemInfoApi shareInstance] getApplictionDisguiseWithSuccessBlock:^(LKSystemBaseModel *model) {
+//        [weakSelf createDefaultView];
+////        [weakSelf createTrueView:model.switchUrl];
+//    } failure:^(NSString *errMsg, NSInteger errCode) {
+//        NSLog(errMsg, errCode);
+//        [weakSelf createDefaultView];
 //    }];
+    
+
 }
 
 //创建webviewcontroller

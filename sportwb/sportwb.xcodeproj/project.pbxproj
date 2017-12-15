@@ -33,6 +33,9 @@
 		6A6ACCAC1FE2751A0078F839 /* OPMyBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCA71FE275180078F839 /* OPMyBottomView.m */; };
 		6A6ACCAD1FE2751A0078F839 /* OPMyBottomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCA81FE275190078F839 /* OPMyBottomViewCell.m */; };
 		6A6ACCAE1FE2751A0078F839 /* OPMyTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCAA1FE275190078F839 /* OPMyTopView.m */; };
+		6A6ACCB11FE3A5C30078F839 /* LKRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCB01FE3A5C30078F839 /* LKRegisterViewController.m */; };
+		6ACB6EC01FE3C731003ACC16 /* OPFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB6EBE1FE3C731003ACC16 /* OPFeedbackViewController.m */; };
+		6ACB6EC31FE3CD96003ACC16 /* OPMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB6EC11FE3CD95003ACC16 /* OPMoreViewController.m */; };
 		6AF601C21FD92148008A97AF /* LKBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C11FD92148008A97AF /* LKBaseApi.m */; };
 		6AF601C51FD92292008A97AF /* LKCommonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C41FD92292008A97AF /* LKCommonDataModel.m */; };
 		6AF601CD1FD92797008A97AF /* LKParamsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601CC1FD92797008A97AF /* LKParamsUtils.m */; };
@@ -128,6 +131,12 @@
 		6A6ACCA91FE275190078F839 /* OPMyTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMyTopView.h; sourceTree = "<group>"; };
 		6A6ACCAA1FE275190078F839 /* OPMyTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMyTopView.m; sourceTree = "<group>"; };
 		6A6ACCAB1FE2751A0078F839 /* OPMyBottomViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMyBottomViewCell.h; sourceTree = "<group>"; };
+		6A6ACCAF1FE3A5C30078F839 /* LKRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKRegisterViewController.h; sourceTree = "<group>"; };
+		6A6ACCB01FE3A5C30078F839 /* LKRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKRegisterViewController.m; sourceTree = "<group>"; };
+		6ACB6EBE1FE3C731003ACC16 /* OPFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFeedbackViewController.m; sourceTree = "<group>"; };
+		6ACB6EBF1FE3C731003ACC16 /* OPFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFeedbackViewController.h; sourceTree = "<group>"; };
+		6ACB6EC11FE3CD95003ACC16 /* OPMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMoreViewController.m; sourceTree = "<group>"; };
+		6ACB6EC21FE3CD95003ACC16 /* OPMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMoreViewController.h; sourceTree = "<group>"; };
 		6AF601BF1FD91D2D008A97AF /* ApiUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiUrl.h; sourceTree = "<group>"; };
 		6AF601C01FD92148008A97AF /* LKBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKBaseApi.h; sourceTree = "<group>"; };
 		6AF601C11FD92148008A97AF /* LKBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKBaseApi.m; sourceTree = "<group>"; };
@@ -433,6 +442,12 @@
 				6A350D6E1FDE54AE00DF62F3 /* LKMineViewController.m */,
 				6A6ACC8E1FDFC68E0078F839 /* LKLoginViewController.h */,
 				6A6ACC8F1FDFC68E0078F839 /* LKLoginViewController.m */,
+				6A6ACCAF1FE3A5C30078F839 /* LKRegisterViewController.h */,
+				6A6ACCB01FE3A5C30078F839 /* LKRegisterViewController.m */,
+				6ACB6EBF1FE3C731003ACC16 /* OPFeedbackViewController.h */,
+				6ACB6EBE1FE3C731003ACC16 /* OPFeedbackViewController.m */,
+				6ACB6EC21FE3CD95003ACC16 /* OPMoreViewController.h */,
+				6ACB6EC11FE3CD95003ACC16 /* OPMoreViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -849,6 +864,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ACB6EC31FE3CD96003ACC16 /* OPMoreViewController.m in Sources */,
 				6A6ACCA41FE260DE0078F839 /* PublicFunction.m in Sources */,
 				6A350D8E1FDE6FC100DF62F3 /* pinyin.c in Sources */,
 				6AF601E81FD92DA4008A97AF /* SDTransparentPieProgressView.m in Sources */,
@@ -865,7 +881,9 @@
 				6A350DA11FDE839700DF62F3 /* OPADViewButton.m in Sources */,
 				6AF601D31FD92B1B008A97AF /* LKSystemInfoApi.m in Sources */,
 				6A350D6C1FDE54A600DF62F3 /* LKNewsViewController.m in Sources */,
+				6A6ACCB11FE3A5C30078F839 /* LKRegisterViewController.m in Sources */,
 				6A350D6F1FDE54AE00DF62F3 /* LKMineViewController.m in Sources */,
+				6ACB6EC01FE3C731003ACC16 /* OPFeedbackViewController.m in Sources */,
 				6AF601E61FD92DA4008A97AF /* SDBallProgressView.m in Sources */,
 				6A6ACCA31FE260DE0078F839 /* PublicInfomation.m in Sources */,
 				6A350D661FDA9B1600DF62F3 /* LKBaseViewController.m in Sources */,

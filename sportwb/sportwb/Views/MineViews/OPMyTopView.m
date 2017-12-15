@@ -8,6 +8,7 @@
 
 #import "OPMyTopView.h"
 #import "PublicFunction.h"
+#import "OPMoreViewController.h"
 
 @interface OPMyTopView (){
     UIImageView * backgroundView;
@@ -20,8 +21,6 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor blackColor];
-
         UIImage * image = [UIImage imageNamed:@"user_tbg"];
         self.layer.contents = (id)image.CGImage;
         self.frame = frame;
@@ -36,7 +35,6 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         [self createView];
-//        [self getPingScore];
     }
     return self;
 }
@@ -62,64 +60,10 @@
         make.width.height.equalTo(@15);
     }];
     
-    _nameLabel = [UILabel new];
-    _nameLabel.font = FONT_FOR_TEXT_14;
-    _nameLabel.textColor = [UIColor whiteColor];
-    _nameLabel.textAlignment = NSTextAlignmentLeft;
-    [self addSubview:_nameLabel];
-    [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(_avatarView.mas_right).offset(20);
-        make.top.equalTo(_avatarView);
-        make.right.lessThanOrEqualTo(self).offset(-40);
-    }];
-
-//    _viewButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self addSubview:_viewButton];
-//    [_viewButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(_avatarView.mas_right).offset(20);
-//        make.top.equalTo(_avatarView).offset(10);
-//        make.right.equalTo(indicateImage.mas_left);
-//        make.bottom.equalTo(self);
-//    }];
-
-    _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_loginButton setTitle:(@"注册/登录")
-                  forState:UIControlStateNormal];
-    _loginButton.titleLabel.font = FONT_FOR_TEXT_18;
-    [_loginButton addTarget:self action:@selector(clickLoginBtn)
-           forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:_loginButton];
-    [_loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(_avatarView.mas_right).offset(15);
-        make.centerY.equalTo(_avatarView);
-        make.right.equalTo(self);
-    }];
-    
-    UIButton * setButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [setButton setImage:[UIImage imageNamed:@"icon_setting"] forState:UIControlStateNormal];
-    [setButton addTarget:self action:@selector(clickSettingBtn)
-        forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:setButton];
-    [setButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self).offset(-10);
-        make.top.equalTo(self).offset(24);
-        make.width.height.equalTo(@40);
-    }];
-    
-//    [self layoutIfNeeded];
-//    setButton.frame = CGRectMake(20, 60, 40, 100);
-//    [self layoutSubviews];
-//    [self updateConstraintsIfNeeded];
-//    [self updateConstraints];
-    
-}
-
-- (void)clickLoginBtn {
-    [PublicFunction needLogin:NO];
 }
 - (void)clickSettingBtn {
-//    OPMoreViewController *aVC = [[OPMoreViewController alloc]init];
-//    [UIUtils pushVC:aVC];
+    OPMoreViewController *aVC = [[OPMoreViewController alloc]init];
+    [UIUtils pushVC:aVC];
 }
 
 

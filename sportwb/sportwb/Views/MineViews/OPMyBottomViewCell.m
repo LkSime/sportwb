@@ -43,8 +43,15 @@
     _iconImageView.layer.masksToBounds = YES;
     [self addSubview:_iconImageView];
     
-//    _titleLabel = createLabel(RightForView(_iconImageView) + 10, 17, 160, 16, 16, COLOR_FOR_TEXT_4D);
-//    [self addSubview:_titleLabel];
+    _titleLabel = [UILabel new];
+    _titleLabel.textColor = COLOR_FOR_TEXT_4D;
+    [self addSubview:_titleLabel];
+    [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_iconImageView.mas_right).offset(10);
+        make.centerY.equalTo(_iconImageView);
+        make.width.equalTo(@160);
+        make.height.equalTo(@16);
+    }];
     
     UIImageView * arrowImage = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 10 - 15, 17.5, 9, 15)];
     arrowImage.image = [UIImage imageNamed:@"right_arrow"];

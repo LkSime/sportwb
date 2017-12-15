@@ -11,6 +11,8 @@
 
 #define Audio_Load_Path     @"audio"
 
+#define USER_INFO_FILE @"sportwb_info.plist"
+
 //---------------多语言----------------
 #define NSLocalizedStringFromEPing(key) \
 NSLocalizedString(key, nil)

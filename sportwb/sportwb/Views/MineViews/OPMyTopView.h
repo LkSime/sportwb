@@ -18,6 +18,4 @@
 @property (nonatomic, strong) UIButton       * loginButton;
 @property (nonatomic, strong) UIButton       * viewButton;
 
--(void)getPingScore;
-
 @end
