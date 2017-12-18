@@ -8,7 +8,6 @@
 
 #import "OPMyTopView.h"
 #import "PublicFunction.h"
-#import "OPMoreViewController.h"
 
 @interface OPMyTopView (){
     UIImageView * backgroundView;
@@ -60,11 +59,14 @@
         make.width.height.equalTo(@15);
     }];
     
+    _viewButton = [UIButton new];
+    [self addSubview:_viewButton];
+    [_viewButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(self);
+        make.height.width.equalTo(self);
+    }];
+    
+    
 }
-- (void)clickSettingBtn {
-    OPMoreViewController *aVC = [[OPMoreViewController alloc]init];
-    [UIUtils pushVC:aVC];
-}
-
 
 @end

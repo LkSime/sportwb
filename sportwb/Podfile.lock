@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - FLAnimatedImage (1.0.12)
   - KissXML (5.0)
   - Mantle (2.1.0):
     - Mantle/extobjc (= 2.1.0)
@@ -37,6 +38,8 @@ PODS:
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
   - SVProgressHUD (2.2.2)
+  - XHLaunchAd (3.9.1):
+    - FLAnimatedImage (~> 1.0.12)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -48,9 +51,11 @@ DEPENDENCIES:
   - Reveal-SDK (~> 4)
   - SDWebImage (= 3.8.1)
   - SVProgressHUD
+  - XHLaunchAd
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   KissXML: ce643413d618ad69886d0d43c3792b7dedfe476e
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -59,7 +64,8 @@ SPEC CHECKSUMS:
   Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  XHLaunchAd: f452a6758e46ca6fbaf8b19eef4865003ec710e7
 
-PODFILE CHECKSUM: 51d86477110b0c384a75ddb2d2fb71264853a290
+PODFILE CHECKSUM: d0e747ad7f4253690311cd74c67a3f09289c6870
 
 COCOAPODS: 1.3.1

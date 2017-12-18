@@ -8,6 +8,7 @@
 
 #import "OPMyBottomView.h"
 #import "OPFeedbackViewController.h"
+#import "LKLieViewController.h"
 
 @interface OPMyBottomView () {
 
@@ -30,33 +31,33 @@
     _opHealthrecord = [[OPMyBottomViewCell alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
     [_opHealthrecord setMyBottomViewCellWithTitle:@"做任务赚取积分"
                                             Image:@"thinking_list_qrcode"
-                                      PushVCClass:@"OPHealthRecordViewController"];
+                                      PushVCClass:@"LKLieViewController"];
     [self addSubview:_opHealthrecord];
     
     _opOrderForm = [[OPMyBottomViewCell alloc] initWithFrame:CGRectMake(0, 50, SCREEN_WIDTH, 50)];
     [_opOrderForm setMyBottomViewCellWithTitle:@"消息"
                                          Image:@"icon_my_order"
-                                   PushVCClass:@"OPOrderManagementViewController"];
+                                   PushVCClass:@"LKLieViewController"];
     [self addSubview:_opOrderForm];
     _opOrderForm.unReadLabel.hidden = YES;
     
     _opTaskList = [[OPMyBottomViewCell alloc] initWithFrame:CGRectMake(0, 110, SCREEN_WIDTH, 50)];
     [_opTaskList setMyBottomViewCellWithTitle:@"心水收藏"
                                         Image:@"icon_my_todotask"
-                                  PushVCClass:@"OPPointTaskVC"];
+                                  PushVCClass:@"LKLieViewController"];
     [self addSubview:_opTaskList];
     _opTaskList.unReadLabel.hidden = YES;
     
     _opMessage = [[OPMyBottomViewCell alloc] initWithFrame:CGRectMake(0, 160, SCREEN_WIDTH, 50)];
     [_opMessage setMyBottomViewCellWithTitle:@"心水评论"
                                        Image:@"thinking_list_msg"
-                                 PushVCClass:@"OPIMChatListViewController"];
+                                 PushVCClass:@"LKLieViewController"];
     [self addSubview:_opMessage];
     
     _opAddress = [[OPMyBottomViewCell alloc] initWithFrame:CGRectMake(0, 210, SCREEN_WIDTH, 50)];
     [_opAddress setMyBottomViewCellWithTitle:@"通讯录"
                                        Image:@"thinking_list_friend"
-                                 PushVCClass:@"OPMyfriendsVC"];
+                                 PushVCClass:@"LKLieViewController"];
     CGRect adFrame = _opAddress.unReadLabel.frame;
     adFrame.origin.y += 2;
     adFrame.origin.x += 2;

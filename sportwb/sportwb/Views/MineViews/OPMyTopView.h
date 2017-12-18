@@ -15,7 +15,7 @@
 @property (nonatomic, strong) UIImageView    * memberSign;
 @property (nonatomic, strong) UILabel        * nameLabel;
 @property (nonatomic, strong) UILabel        * scoreLabel;
-@property (nonatomic, strong) UIButton       * loginButton;
+//@property (nonatomic, strong) UIButton       * loginButton;
 @property (nonatomic, strong) UIButton       * viewButton;
 
 @end

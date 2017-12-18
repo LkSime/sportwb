@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 1ping.com. All rights reserved.
 //
 
-#import "MMViewController.h"
+#import "LKBaseViewController.h"
 
 /**设置*/
-@interface OPMoreViewController : MMViewController
+@interface OPMoreViewController : LKBaseViewController
 
 @end

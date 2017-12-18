@@ -167,7 +167,7 @@
     showPwdBtn.backgroundColor = [UIColor clearColor];
     [showPwdBtn setImage:[UIImage imageNamed:@"tip_hide_pwd"] forState:UIControlStateNormal];
     [showPwdBtn setImage:[UIImage imageNamed:@"tip_show_pwd"] forState:UIControlStateSelected];
-    [showPwdBtn addTarget:self action:@selector(actionForShowPwd:) forControlEvents:UIControlEventTouchUpInside];
+    [showPwdBtn addTarget:self action:@selector(eyeBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [infoView addSubview:showPwdBtn];
     [showPwdBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(lineView.mas_bottom);
@@ -212,26 +212,26 @@
     [contentView addSubview:registerButton];
     [registerButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(spaceView.mas_bottom).offset(20);
-        make.centerX.equalTo(contentView).offset(- SCREEN_WIDTH * 0.25);
+        make.centerX.equalTo(contentView);
         make.width.equalTo(@100);
         make.height.equalTo(@32);
     }];
     
-    UIButton * forgotButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    forgotButton.titleLabel.font = FONT_FOR_TEXT_14;
-    [forgotButton setTitle:@"找回密码" forState:UIControlStateNormal];
-    [forgotButton addTarget:self action:@selector(actionOfForgot) forControlEvents:UIControlEventTouchUpInside];
-    [contentView addSubview:forgotButton];
-    [forgotButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(spaceView.mas_bottom).offset(20);
-        make.centerX.equalTo(contentView).offset(SCREEN_WIDTH * 0.25);
-        make.width.equalTo(@100);
-        make.height.equalTo(@32);
-    }];
+//    UIButton * forgotButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    forgotButton.titleLabel.font = FONT_FOR_TEXT_14;
+//    [forgotButton setTitle:@"找回密码" forState:UIControlStateNormal];
+//    [forgotButton addTarget:self action:@selector(actionOfForgot) forControlEvents:UIControlEventTouchUpInside];
+//    [contentView addSubview:forgotButton];
+//    [forgotButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(spaceView.mas_bottom).offset(20);
+//        make.centerX.equalTo(contentView).offset(SCREEN_WIDTH * 0.25);
+//        make.width.equalTo(@100);
+//        make.height.equalTo(@32);
+//    }];
     
     
     [contentView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(forgotButton.mas_bottom).offset(20);
+        make.bottom.equalTo(registerButton.mas_bottom).offset(20);
     }];
     
     
@@ -275,28 +275,33 @@
 
 }
 - (void)actionForLogin {
-    [self.navigationController pushViewController:_drawerController animated:YES];
-    
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//    NSString *docDir = [paths objectAtIndex:0];
-//    NSString *filePath = [docDir stringByAppendingPathComponent:USER_INFO_FILE];
-//    NSDictionary *_mdictData = [[[NSDictionary alloc] initWithContentsOfFile:filePath] mutableCopy];
-//
-//    NSString * account = phoneField.text;
-//    NSString * pwd = pwdField.text;
-//    __weak typeof(self) weakSelf = self;
-//    [_mdictData enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-//        if ([key isEqualToString:account] && [obj isEqualToString:pwd]) {
-//            [weakSelf.navigationController pushViewController:_drawerController animated:YES];
-//        } else {
-//            TipAlert(@"账号或者密码有误");
-//        }
-//    }];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    NSString *filePath = [docDir stringByAppendingPathComponent:USER_INFO_FILE];
+    NSDictionary *_mdictData = [[[NSDictionary alloc] initWithContentsOfFile:filePath] mutableCopy];
+
+    NSString * account = phoneField.text;
+    NSString * pwd = pwdField.text;
+    __weak typeof(self) weakSelf = self;
+    [_mdictData enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([key isEqualToString:account] && [obj isEqualToString:pwd]) {
+            [weakSelf.navigationController pushViewController:_drawerController animated:YES];
+        } else {
+            TipAlert(@"账号或者密码有误");
+        }
+    }];
     
 }
-- (void)actionOfForgot {
-    
+- (void)eyeBtnClick:(UIButton *)btn{
+    btn.selected = !btn.selected;
+    pwdField.secureTextEntry = !pwdField.secureTextEntry;
+        
 }
+
+//- (void)actionOfForgot {
+//    LKRegisterViewController * regVC = [LKRegisterViewController new];
+//    [UIUtils pushVC:regVC];
+//}
 - (void)actionOfRegister {
     LKRegisterViewController * regVC = [LKRegisterViewController new];
     [UIUtils pushVC:regVC];

@@ -81,16 +81,11 @@
 }
 
 - (void)pushViewController {
-    if ([_pushVC isEqualToString:@"OPFeedbackViewController"] || [_pushVC isEqualToString:@"OPMemberInfoViewController"]) {
+//    if ([_pushVC isEqualToString:@"OPFeedbackViewController"]) {
         [UIUtils pushVC:[NSString stringWithString:_pushVC] withParam:nil];
-    } else {
-//        if (![[OPUserInfoManager sharedInstance]isLogin]) {
-//            OPLoginViewController   *loginVC = [[OPLoginViewController alloc] init];
-//            [UIUtils pushVC:loginVC];
-//            return;
-//        }
-//        [UIUtils pushVC:[NSString stringWithString:_pushVC] withParam:nil];
-    }
+//    } else {
+//        [UIUtils pushVC:[] withParam:<#(NSDictionary *)#>]
+//    }
 }
 /*
 // Only override drawRect: if you perform custom drawing.

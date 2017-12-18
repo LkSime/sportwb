@@ -16,7 +16,8 @@ target 'sportwb' do
 	pod 'KissXML', '5.0'
     pod 'SDWebImage', '3.8.1'
     pod 'MMDrawerController', '~> 0.5.7'
-
+    pod 'XHLaunchAd'
+    
 target 'sportwbTests' do
     inherit! :search_paths
     # Pods for testing

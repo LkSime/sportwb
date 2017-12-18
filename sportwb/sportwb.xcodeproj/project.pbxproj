@@ -34,6 +34,7 @@
 		6A6ACCAD1FE2751A0078F839 /* OPMyBottomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCA81FE275190078F839 /* OPMyBottomViewCell.m */; };
 		6A6ACCAE1FE2751A0078F839 /* OPMyTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCAA1FE275190078F839 /* OPMyTopView.m */; };
 		6A6ACCB11FE3A5C30078F839 /* LKRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCB01FE3A5C30078F839 /* LKRegisterViewController.m */; };
+		6AC020241FE7BC69008E3E84 /* LKLieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC020231FE7BC69008E3E84 /* LKLieViewController.m */; };
 		6ACB6EC01FE3C731003ACC16 /* OPFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB6EBE1FE3C731003ACC16 /* OPFeedbackViewController.m */; };
 		6ACB6EC31FE3CD96003ACC16 /* OPMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB6EC11FE3CD95003ACC16 /* OPMoreViewController.m */; };
 		6AF601C21FD92148008A97AF /* LKBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF601C11FD92148008A97AF /* LKBaseApi.m */; };
@@ -133,6 +134,8 @@
 		6A6ACCAB1FE2751A0078F839 /* OPMyBottomViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMyBottomViewCell.h; sourceTree = "<group>"; };
 		6A6ACCAF1FE3A5C30078F839 /* LKRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKRegisterViewController.h; sourceTree = "<group>"; };
 		6A6ACCB01FE3A5C30078F839 /* LKRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKRegisterViewController.m; sourceTree = "<group>"; };
+		6AC020221FE7BC69008E3E84 /* LKLieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LKLieViewController.h; path = sportwb/Controllers/LKLieViewController.h; sourceTree = SOURCE_ROOT; };
+		6AC020231FE7BC69008E3E84 /* LKLieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LKLieViewController.m; path = sportwb/Controllers/LKLieViewController.m; sourceTree = SOURCE_ROOT; };
 		6ACB6EBE1FE3C731003ACC16 /* OPFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFeedbackViewController.m; sourceTree = "<group>"; };
 		6ACB6EBF1FE3C731003ACC16 /* OPFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFeedbackViewController.h; sourceTree = "<group>"; };
 		6ACB6EC11FE3CD95003ACC16 /* OPMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMoreViewController.m; sourceTree = "<group>"; };
@@ -448,6 +451,8 @@
 				6ACB6EBE1FE3C731003ACC16 /* OPFeedbackViewController.m */,
 				6ACB6EC21FE3CD95003ACC16 /* OPMoreViewController.h */,
 				6ACB6EC11FE3CD95003ACC16 /* OPMoreViewController.m */,
+				6AC020221FE7BC69008E3E84 /* LKLieViewController.h */,
+				6AC020231FE7BC69008E3E84 /* LKLieViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -893,6 +898,7 @@
 				6A350D981FDE82E700DF62F3 /* LKADScrollView.m in Sources */,
 				6A350D691FDE549B00DF62F3 /* LKHomeViewController.m in Sources */,
 				6A6ACC931FE0C0DC0078F839 /* LKTHomeMediaCell.m in Sources */,
+				6AC020241FE7BC69008E3E84 /* LKLieViewController.m in Sources */,
 				BC9878F91FD851A8001D6CA0 /* main.m in Sources */,
 				6A6ACC9E1FE25F090078F839 /* MMViewController.m in Sources */,
 				6A350D651FDA9B1600DF62F3 /* LKBaseWebViewController.m in Sources */,
@@ -1073,6 +1079,7 @@
 			baseConfigurationReference = 579CFC0EBD7879C31BFFBA70 /* Pods-sportwb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S35C9ZJNC;
@@ -1094,6 +1101,7 @@
 			baseConfigurationReference = C745A24CE6C8832DA0BF9FD7 /* Pods-sportwb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S35C9ZJNC;

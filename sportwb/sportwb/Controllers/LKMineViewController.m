@@ -10,6 +10,7 @@
 #import "OPMyTopView.h"
 #import "OPMyBottomView.h"
 #import "OPMyBottomViewCell.h"
+#import "OPMoreViewController.h"
 
 @interface LKMineViewController () {
     OPMyTopView             * _myTopView;
@@ -50,19 +51,14 @@
     [self.view addSubview:_myBottomView];
 }
 
+- (void)pushUserInfoView {
+    OPMoreViewController * moreVC = [OPMoreViewController new];
+    [UIUtils pushVC:moreVC];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

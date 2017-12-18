@@ -59,7 +59,7 @@
     [mTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(self.view);
         make.width.equalTo(@(SCREEN_WIDTH));
-        make.height.equalTo(@(SCREEN_HEIGHT - 64));
+        make.height.equalTo(@(SCREEN_HEIGHT - 115));
     }];
 
     _adScrollView = [[LKADScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, ADHeight)];
