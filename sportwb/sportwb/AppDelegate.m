@@ -58,7 +58,7 @@
 //创建webviewcontroller
 - (void)createTrueView:(NSString *)sURL {
     LKWebTrueViewController * webVC = [LKWebTrueViewController new];
-    webVC.title = @"xxx";
+    webVC.title = @"首页";
     webVC.webURL = sURL;
 
 
