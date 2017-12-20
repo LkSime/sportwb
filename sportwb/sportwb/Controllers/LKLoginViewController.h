@@ -11,4 +11,6 @@
 
 @interface LKLoginViewController : MMViewController
 
+@property (assign) BOOL isLaunch;
+
 @end

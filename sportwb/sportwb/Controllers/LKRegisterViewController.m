@@ -24,36 +24,9 @@
 @end
 
 @implementation LKRegisterViewController
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = NO;
-    
-    
-}
--(void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden = YES;
-    
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    [self setTitle:@"注册"];
-    
-    UIImage * _backImage = [[UIImage imageNamed:@"btn_nav_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIButton * _backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 44)];
-    [_backButton setImage:_backImage forState:UIControlStateNormal];
-    [_backButton setImageEdgeInsets:UIEdgeInsetsMake(0, -14, 0, 0)];
-    [_backButton addTarget:self action:@selector(clickBackButton) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem * _backItem = [[UIBarButtonItem alloc] initWithCustomView:_backButton];
-    self.navigationItem.leftBarButtonItem = _backItem;
     
     //背景
     UIImageView *bgImgV = [UIImageView new];
@@ -65,6 +38,17 @@
         make.height.width.equalTo(self.view);
     }];
     
+    UIImage * _backImage = [[UIImage imageNamed:@"angle-left"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIButton * _backButton = [UIButton new];
+    [_backButton setBackgroundImage:_backImage forState:UIControlStateNormal];
+    [_backButton addTarget:self action:@selector(clickBackButton) forControlEvents:UIControlEventTouchUpInside];
+    [bgImgV addSubview:_backButton];
+    [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@30);
+        make.left.equalTo(@10);
+        make.height.equalTo(@44);
+        make.width.equalTo(@44);
+    }];
     
     //账号密码容器
     UIView *actPwdContentView = [UIView new];
@@ -207,9 +191,13 @@
     NSString *filePath = [docDir stringByAppendingPathComponent:USER_INFO_FILE];
     [_mdictData writeToFile:filePath atomically:YES];
 
-    [SVProgressHUD showErrorWithStatus:@"注册成功，请登录"];
+    [SVProgressHUD showSuccessWithStatus:@"注册成功，请登录"];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
         [UIUtils popViewControllerAnimated:YES];
+//        if (self.delegate) {
+//            [self.delegate registerSuccess];
+//        }
     });
 }
 
@@ -220,21 +208,7 @@
     
 }
 
-#pragma mark - 文本输入代理
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//
-//        if ((_tfPhone.text.length > 10) && (_tfPwd.text.length > 5)) {
-//
-//            _nextSetpBtn.enabled = YES;
-//        }else{
-//            _nextSetpBtn.enabled = NO;
-//        }
-//
-//    });
-    
-    return YES;
+- (void)clickBackButton {
+    [UIUtils popViewControllerAnimated:YES];
 }
-
 @end

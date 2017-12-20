@@ -11,6 +11,7 @@
 #import "SDWebImageManager.h"
 #import "OPFeedbackViewController.h"
 #import "LKLieViewController.h"
+#import "LKUserInfoManager.h"
 
 #define GAP                     20.0f
 #define BTN_HEIGHT              40.0f
@@ -61,13 +62,24 @@
     _lbVer.textAlignment = NSTextAlignmentRight;
     NSString *verStr = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];//CFBundleShortVersionString  CFBundleVersion
     
-    verStr = @"1.2.8";
+    verStr = @"1.2.0";
 
     _lbVer.text = [NSString stringWithFormat:@"%@ %@", @"当前版本：", verStr];
     
-    NSArray *arryTitles = [[NSArray alloc] initWithObjects:@"关于我们", @"清理缓存", @"使用帮助", @"版本信息",nil];
-    NSArray *arryGap = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], nil];
-    NSArray *arryContent = [[NSArray alloc] initWithObjects:imgvArrow1, imgvArrow2, imgvArrow3, _lbVer, [NSNull null], nil];
+    LKUserModel * model = [LKUserInfoManager sharedInstance].infoModel;
+    NSMutableArray * arryTitles = [NSMutableArray array];
+    NSMutableArray * arryGap = [NSMutableArray array];
+    NSMutableArray * arryContent = [NSMutableArray array];
+    if (model.isLogin) {
+        arryTitles = [NSMutableArray arrayWithObjects:@"关于我们", @"清理缓存", @"使用帮助", @"版本信息", @"退出",nil];
+        arryGap = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], nil];
+        arryContent = [NSMutableArray arrayWithObjects:imgvArrow1, imgvArrow2, imgvArrow3, _lbVer, [NSNull null], [NSNull null], nil];
+    } else {
+        arryTitles = [NSMutableArray arrayWithObjects:@"关于我们", @"清理缓存", @"使用帮助", @"版本信息", nil];
+        arryGap = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], nil];
+        arryContent = [NSMutableArray arrayWithObjects:imgvArrow1, imgvArrow2, imgvArrow3, _lbVer, [NSNull null], nil];
+    }
+
     
     CGFloat fLastY = 0;
     
@@ -101,6 +113,7 @@
                 btnClear.enabled = NO;
             }
             [bgV addSubview:btnClear];
+            
         }
         
         [self.view addSubview:bgV];
@@ -160,7 +173,14 @@
             [UIUtils pushVC:lieVC];
         }
             break;
+        case 4:
+        {
+            [[LKUserInfoManager sharedInstance] clean];
+            [UIUtils popViewControllerAnimated:YES];
+        }
+            break;
         case 3:
+            
         default:
             break;
     }

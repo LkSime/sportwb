@@ -14,8 +14,9 @@
 #import "AppDelegate.h"
 #import "MMDrawerController.h"
 #import "LKRegisterViewController.h"
+#import "LKUserInfoManager.h"
 
-@interface LKLoginViewController ()<UITabBarControllerDelegate> {
+@interface LKLoginViewController ()<UITabBarControllerDelegate, LKRegisterVCDelegate> {
     MMDrawerController *_drawerController;
     UITextField *phoneField;
     UITextField *pwdField;
@@ -27,21 +28,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
-    
-    NSMutableDictionary *_mdictData = [[NSMutableDictionary alloc] init];
-    [_mdictData setObject:@"123456" forKey:@"18515991874"];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docDir = [paths objectAtIndex:0];
-    NSString *filePath = [docDir stringByAppendingPathComponent:USER_INFO_FILE];
-    [_mdictData writeToFile:filePath atomically:YES];
-    
-    [self createView];
+    self.view.backgroundColor = COLOR_FOR_BACKGROUND_F2;
+
     [self createTabbarView];
+    if (_isLaunch == NO) {
+        [self createView];
+    } else {
+        [self.navigationController pushViewController:_drawerController animated:YES];
+    }
+
 }
 
 #pragma mark - createView
 -(void)createView{
+
     UIImageView *bgImg = [UIImageView new];
     bgImg.image = [UIImage imageNamed:@"login_bg.jpg"];
     bgImg.userInteractionEnabled = YES;
@@ -50,12 +50,24 @@
         make.edges.equalTo(self.view);
         make.width.equalTo(self.view);
     }];
+    UIImage * _backImage = [[UIImage imageNamed:@"angle-left"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIButton * _backButton = [UIButton new];
+    [_backButton setBackgroundImage:_backImage forState:UIControlStateNormal];
+    [_backButton addTarget:self action:@selector(clickBackButton) forControlEvents:UIControlEventTouchUpInside];
+    [bgImg addSubview:_backButton];
+    [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@30);
+        make.left.equalTo(@10);
+        make.height.equalTo(@44);
+        make.width.equalTo(@44);
+    }];
     
     UIScrollView *scrollView = [UIScrollView new];
     scrollView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:scrollView];
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
+        make.top.equalTo(_backButton.mas_bottom).offset(10);
+        make.left.bottom.equalTo(self.view);
         make.width.equalTo(self.view);
     }];
     
@@ -216,19 +228,7 @@
         make.width.equalTo(@100);
         make.height.equalTo(@32);
     }];
-    
-//    UIButton * forgotButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    forgotButton.titleLabel.font = FONT_FOR_TEXT_14;
-//    [forgotButton setTitle:@"找回密码" forState:UIControlStateNormal];
-//    [forgotButton addTarget:self action:@selector(actionOfForgot) forControlEvents:UIControlEventTouchUpInside];
-//    [contentView addSubview:forgotButton];
-//    [forgotButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(spaceView.mas_bottom).offset(20);
-//        make.centerX.equalTo(contentView).offset(SCREEN_WIDTH * 0.25);
-//        make.width.equalTo(@100);
-//        make.height.equalTo(@32);
-//    }];
-    
+
     
     [contentView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(registerButton.mas_bottom).offset(20);
@@ -282,10 +282,16 @@
 
     NSString * account = phoneField.text;
     NSString * pwd = pwdField.text;
-    __weak typeof(self) weakSelf = self;
+//    __weak typeof(self) weakSelf = self;
     [_mdictData enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         if ([key isEqualToString:account] && [obj isEqualToString:pwd]) {
-            [weakSelf.navigationController pushViewController:_drawerController animated:YES];
+
+            NSMutableDictionary *loginDic = [NSMutableDictionary new];
+            [loginDic setObject:account forKey:@"username"];
+            [loginDic setObject:@"Yes" forKey:@"isLogin"];
+            [[LKUserInfoManager sharedInstance] setAndUpdateUserInfoWithDictionary:loginDic];
+
+            [UIUtils popViewControllerAnimated:YES];
         } else {
             TipAlert(@"账号或者密码有误");
         }
@@ -298,12 +304,9 @@
         
 }
 
-//- (void)actionOfForgot {
-//    LKRegisterViewController * regVC = [LKRegisterViewController new];
-//    [UIUtils pushVC:regVC];
-//}
 - (void)actionOfRegister {
     LKRegisterViewController * regVC = [LKRegisterViewController new];
+    regVC.delegate = self;
     [UIUtils pushVC:regVC];
 }
 #pragma mark - TabbarController Delegate
@@ -316,19 +319,16 @@
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
     
 }
+- (void)clickBackButton {
+    [UIUtils popViewControllerAnimated:YES];
+}
+- (void)registerSuccess {
+    [UIUtils popViewControllerAnimated:YES];
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
+\
 @end

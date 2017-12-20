@@ -28,6 +28,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.navRoot = [UINavigationController new];
+    self.navRoot.view.backgroundColor = COLOR_FOR_BACKGROUND_F2;
     self.window.rootViewController = self.navRoot;
     [self.window makeKeyAndVisible];
     
@@ -68,7 +69,15 @@
 
 //创建常规界面
 - (void)createDefaultView {
+    NSMutableDictionary *_mdictData = [[NSMutableDictionary alloc] init];
+    [_mdictData setObject:@"123456" forKey:@"18515991874"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    NSString *filePath = [docDir stringByAppendingPathComponent:USER_INFO_FILE];
+    [_mdictData writeToFile:filePath atomically:YES];
+    
     LKLoginViewController * loginVC = [LKLoginViewController new];
+    loginVC.isLaunch = YES;
     _navRoot.navigationBarHidden = YES;
     [_navRoot pushViewController:loginVC animated:YES];
     
@@ -106,6 +115,7 @@
     imageAdconfiguration.imageNameOrURLString = @"http://c.hiphotos.baidu.com/image/pic/item/d62a6059252dd42a6a943c180b3b5bb5c8eab8e7.jpg";
     //广告点击打开页面参数(openModel可为NSString,模型,字典等任意类型)
     imageAdconfiguration.openModel = @"http://www.it7090.com";
+    imageAdconfiguration.duration = 2;
     //显示图片开屏广告
     [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
 }

@@ -11,6 +11,8 @@
 #import "OPMyBottomView.h"
 #import "OPMyBottomViewCell.h"
 #import "OPMoreViewController.h"
+#import "LKLoginViewController.h"
+#import "LKUserInfoManager.h"
 
 @interface LKMineViewController () {
     OPMyTopView             * _myTopView;
@@ -41,14 +43,37 @@
 
     [self createView];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    LKUserModel * model = [LKUserInfoManager sharedInstance].infoModel;
+    if (model.isLogin) {
+        _myTopView.loginButton.hidden = YES;
+        _myTopView.nameLabel.hidden = NO;
+        _myTopView.nameLabel.text = model.username;
+        _myTopView.avatarView.image = [UIImage imageNamed:@"sportwb_avatar"];
+    } else {
+        _myTopView.loginButton.hidden = NO;
+        _myTopView.nameLabel.hidden = YES;
+        _myTopView.nameLabel.text = @"";
+        _myTopView.avatarView.image = [UIImage imageNamed:@"avatar"];
+    }
+}
+
 - (void)createView {
 
     _myTopView = [[OPMyTopView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
     [_myTopView.viewButton addTarget:self action:@selector(pushUserInfoView) forControlEvents:UIControlEventTouchUpInside];
+    [_myTopView.loginButton addTarget:self action:@selector(actionOfLogin) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_myTopView];
     
     _myBottomView = [[OPMyBottomView alloc] initWithFrame:CGRectMake(0, BottomForView(_myTopView) + 10, SCREEN_WIDTH, 500)];
     [self.view addSubview:_myBottomView];
+}
+
+- (void)actionOfLogin {
+    LKLoginViewController * loginVC = [LKLoginViewController new];
+    loginVC.isLaunch = NO;
+    [UIUtils pushVC:loginVC];
 }
 
 - (void)pushUserInfoView {
