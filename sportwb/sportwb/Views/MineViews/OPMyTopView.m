@@ -29,13 +29,6 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self createView];
-    }
-    return self;
-}
 - (void)createView {
     _avatarView = [UIImageView new];
     [self addSubview:_avatarView];

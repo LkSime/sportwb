@@ -34,6 +34,8 @@
 		6A6ACCAD1FE2751A0078F839 /* OPMyBottomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCA81FE275190078F839 /* OPMyBottomViewCell.m */; };
 		6A6ACCAE1FE2751A0078F839 /* OPMyTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCAA1FE275190078F839 /* OPMyTopView.m */; };
 		6A6ACCB11FE3A5C30078F839 /* LKRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCB01FE3A5C30078F839 /* LKRegisterViewController.m */; };
+		6A8093931FECDF600051DF18 /* LKCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8093921FECDF600051DF18 /* LKCollectViewController.m */; };
+		6A8093961FECE0770051DF18 /* LKCollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8093951FECE0770051DF18 /* LKCollectCell.m */; };
 		6AC020241FE7BC69008E3E84 /* LKLieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC020231FE7BC69008E3E84 /* LKLieViewController.m */; };
 		6ACB6EC01FE3C731003ACC16 /* OPFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB6EBE1FE3C731003ACC16 /* OPFeedbackViewController.m */; };
 		6ACB6EC31FE3CD96003ACC16 /* OPMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB6EC11FE3CD95003ACC16 /* OPMoreViewController.m */; };
@@ -137,6 +139,10 @@
 		6A6ACCAB1FE2751A0078F839 /* OPMyBottomViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMyBottomViewCell.h; sourceTree = "<group>"; };
 		6A6ACCAF1FE3A5C30078F839 /* LKRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKRegisterViewController.h; sourceTree = "<group>"; };
 		6A6ACCB01FE3A5C30078F839 /* LKRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKRegisterViewController.m; sourceTree = "<group>"; };
+		6A8093911FECDF600051DF18 /* LKCollectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKCollectViewController.h; sourceTree = "<group>"; };
+		6A8093921FECDF600051DF18 /* LKCollectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKCollectViewController.m; sourceTree = "<group>"; };
+		6A8093941FECE0770051DF18 /* LKCollectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKCollectCell.h; sourceTree = "<group>"; };
+		6A8093951FECE0770051DF18 /* LKCollectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKCollectCell.m; sourceTree = "<group>"; };
 		6AC020221FE7BC69008E3E84 /* LKLieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LKLieViewController.h; path = sportwb/Controllers/LKLieViewController.h; sourceTree = SOURCE_ROOT; };
 		6AC020231FE7BC69008E3E84 /* LKLieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LKLieViewController.m; path = sportwb/Controllers/LKLieViewController.m; sourceTree = SOURCE_ROOT; };
 		6ACB6EBE1FE3C731003ACC16 /* OPFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFeedbackViewController.m; sourceTree = "<group>"; };
@@ -301,6 +307,8 @@
 				6A6ACCA81FE275190078F839 /* OPMyBottomViewCell.m */,
 				6A6ACCA91FE275190078F839 /* OPMyTopView.h */,
 				6A6ACCAA1FE275190078F839 /* OPMyTopView.m */,
+				6A8093941FECE0770051DF18 /* LKCollectCell.h */,
+				6A8093951FECE0770051DF18 /* LKCollectCell.m */,
 			);
 			path = MineViews;
 			sourceTree = "<group>";
@@ -462,6 +470,8 @@
 				6ACB6EC11FE3CD95003ACC16 /* OPMoreViewController.m */,
 				6AC020221FE7BC69008E3E84 /* LKLieViewController.h */,
 				6AC020231FE7BC69008E3E84 /* LKLieViewController.m */,
+				6A8093911FECDF600051DF18 /* LKCollectViewController.h */,
+				6A8093921FECDF600051DF18 /* LKCollectViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -889,6 +899,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ACB6EC31FE3CD96003ACC16 /* OPMoreViewController.m in Sources */,
+				6A8093961FECE0770051DF18 /* LKCollectCell.m in Sources */,
 				6A6ACCA41FE260DE0078F839 /* PublicFunction.m in Sources */,
 				6A350D8E1FDE6FC100DF62F3 /* pinyin.c in Sources */,
 				6AF601E81FD92DA4008A97AF /* SDTransparentPieProgressView.m in Sources */,
@@ -904,6 +915,7 @@
 				BC9878EE1FD851A8001D6CA0 /* ViewController.m in Sources */,
 				6A350DA11FDE839700DF62F3 /* OPADViewButton.m in Sources */,
 				6AF601D31FD92B1B008A97AF /* LKSystemInfoApi.m in Sources */,
+				6A8093931FECDF600051DF18 /* LKCollectViewController.m in Sources */,
 				6A350D6C1FDE54A600DF62F3 /* LKNewsViewController.m in Sources */,
 				6A6ACCB11FE3A5C30078F839 /* LKRegisterViewController.m in Sources */,
 				6A350D6F1FDE54AE00DF62F3 /* LKMineViewController.m in Sources */,
