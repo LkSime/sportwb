@@ -25,4 +25,8 @@
 -(NSURLSessionDataTask *)getMediaListSuccessBlock:(void (^)(NSArray * mArray))successBlk
                                    withErrorBlock:(ErrorBlock)errorBlk;
 
+//心水收藏列表
+-(NSURLSessionDataTask *)getCollectListSuccessBlock:(void (^)(NSArray * mArray))successBlk
+                                   withErrorBlock:(ErrorBlock)errorBlk;
+
 @end

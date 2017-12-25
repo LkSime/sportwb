@@ -22,4 +22,6 @@
 
 #define APIGET_Home_Media               @"https://b1df78f3-f9fd-4838-9710-fb39147ba26f.mock.pstmn.io"   //首页视频
 
+#define APIGET_Mine_Collect             @"https://559536bb-3519-4361-b254-ccbccfece554.mock.pstmn.io/"  //心水收藏
+
 #endif /* ApiUrl_h */

@@ -8,7 +8,8 @@
 
 #import "OPMyBottomViewCell.h"
 #import "AppDelegate.h"
-//#import "OPLoginViewController.h"
+#import "LKUserModel.h"
+#import "LKUserInfoManager.h"
 
 
 @interface OPMyBottomViewCell () {
@@ -81,11 +82,22 @@
 }
 
 - (void)pushViewController {
-//    if ([_pushVC isEqualToString:@"OPFeedbackViewController"]) {
+    if ([_pushVC isEqualToString:@"collect"]) {
+        //判断是否为测试账号
+        LKUserModel * model = [LKUserInfoManager sharedInstance].infoModel;
+        if ([model.isLogin isEqualToString:@"Yes"]) {
+            if ([model.username isEqualToString:@"18515991874"]) {
+                [UIUtils pushVC:@"LKCollectViewController" withParam:nil];
+            } else {
+                [UIUtils pushVC:@"LKLieViewController" withParam:nil];
+            }
+        } else {
+            [UIUtils pushVC:@"LKLoginViewController" withParam:nil];
+        }
+    } else {
         [UIUtils pushVC:[NSString stringWithString:_pushVC] withParam:nil];
-//    } else {
-//        [UIUtils pushVC:[] withParam:<#(NSDictionary *)#>]
-//    }
+    }
+    
 }
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -34,6 +34,8 @@
 		6A6ACCAD1FE2751A0078F839 /* OPMyBottomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCA81FE275190078F839 /* OPMyBottomViewCell.m */; };
 		6A6ACCAE1FE2751A0078F839 /* OPMyTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCAA1FE275190078F839 /* OPMyTopView.m */; };
 		6A6ACCB11FE3A5C30078F839 /* LKRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ACCB01FE3A5C30078F839 /* LKRegisterViewController.m */; };
+		6A6CBCA11FF0D27C00EAE56C /* LKContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6CBCA01FF0D27C00EAE56C /* LKContentViewController.m */; };
+		6A6CBCA41FF0D29400EAE56C /* LKContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6CBCA31FF0D29400EAE56C /* LKContentCell.m */; };
 		6A8093931FECDF600051DF18 /* LKCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8093921FECDF600051DF18 /* LKCollectViewController.m */; };
 		6A8093961FECE0770051DF18 /* LKCollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8093951FECE0770051DF18 /* LKCollectCell.m */; };
 		6AC020241FE7BC69008E3E84 /* LKLieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC020231FE7BC69008E3E84 /* LKLieViewController.m */; };
@@ -139,6 +141,10 @@
 		6A6ACCAB1FE2751A0078F839 /* OPMyBottomViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMyBottomViewCell.h; sourceTree = "<group>"; };
 		6A6ACCAF1FE3A5C30078F839 /* LKRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKRegisterViewController.h; sourceTree = "<group>"; };
 		6A6ACCB01FE3A5C30078F839 /* LKRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKRegisterViewController.m; sourceTree = "<group>"; };
+		6A6CBC9F1FF0D27C00EAE56C /* LKContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKContentViewController.h; sourceTree = "<group>"; };
+		6A6CBCA01FF0D27C00EAE56C /* LKContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKContentViewController.m; sourceTree = "<group>"; };
+		6A6CBCA21FF0D29400EAE56C /* LKContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKContentCell.h; sourceTree = "<group>"; };
+		6A6CBCA31FF0D29400EAE56C /* LKContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKContentCell.m; sourceTree = "<group>"; };
 		6A8093911FECDF600051DF18 /* LKCollectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKCollectViewController.h; sourceTree = "<group>"; };
 		6A8093921FECDF600051DF18 /* LKCollectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKCollectViewController.m; sourceTree = "<group>"; };
 		6A8093941FECE0770051DF18 /* LKCollectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKCollectCell.h; sourceTree = "<group>"; };
@@ -309,6 +315,8 @@
 				6A6ACCAA1FE275190078F839 /* OPMyTopView.m */,
 				6A8093941FECE0770051DF18 /* LKCollectCell.h */,
 				6A8093951FECE0770051DF18 /* LKCollectCell.m */,
+				6A6CBCA21FF0D29400EAE56C /* LKContentCell.h */,
+				6A6CBCA31FF0D29400EAE56C /* LKContentCell.m */,
 			);
 			path = MineViews;
 			sourceTree = "<group>";
@@ -472,6 +480,8 @@
 				6AC020231FE7BC69008E3E84 /* LKLieViewController.m */,
 				6A8093911FECDF600051DF18 /* LKCollectViewController.h */,
 				6A8093921FECDF600051DF18 /* LKCollectViewController.m */,
+				6A6CBC9F1FF0D27C00EAE56C /* LKContentViewController.h */,
+				6A6CBCA01FF0D27C00EAE56C /* LKContentViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -672,7 +682,7 @@
 				TargetAttributes = {
 					BC9878E51FD851A7001D6CA0 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -930,6 +940,7 @@
 				6AD7D2151FEA0CF0001CB326 /* LKUserInfoManager.m in Sources */,
 				6A350D691FDE549B00DF62F3 /* LKHomeViewController.m in Sources */,
 				6A6ACC931FE0C0DC0078F839 /* LKTHomeMediaCell.m in Sources */,
+				6A6CBCA41FF0D29400EAE56C /* LKContentCell.m in Sources */,
 				6AC020241FE7BC69008E3E84 /* LKLieViewController.m in Sources */,
 				BC9878F91FD851A8001D6CA0 /* main.m in Sources */,
 				6AD7D2181FEA0D46001CB326 /* LKUserModel.m in Sources */,
@@ -947,6 +958,7 @@
 				6AF601C21FD92148008A97AF /* LKBaseApi.m in Sources */,
 				6AF602071FD9406A008A97AF /* LKDataDictionaryManager.m in Sources */,
 				6AF601EA1FD92DA4008A97AF /* SDBaseProgressView.m in Sources */,
+				6A6CBCA11FF0D27C00EAE56C /* LKContentViewController.m in Sources */,
 				6A6ACCAD1FE2751A0078F839 /* OPMyBottomViewCell.m in Sources */,
 				6AF602031FD93E9C008A97AF /* LKSystemModel.m in Sources */,
 			);
@@ -1114,8 +1126,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Haiyan Mo (8S35C9ZJNC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S35C9ZJNC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1125,8 +1137,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mahalo.sportwb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "12881bfb-3456-40b0-bd68-50167259afc6";
-				PROVISIONING_PROFILE_SPECIFIER = sportwb2;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1138,8 +1150,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Haiyan Mo (8S35C9ZJNC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S35C9ZJNC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1149,8 +1161,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mahalo.sportwb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "12881bfb-3456-40b0-bd68-50167259afc6";
-				PROVISIONING_PROFILE_SPECIFIER = sportwb2;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LKNewsSocialListModel;
 
 @interface LKCollectCell : UITableViewCell
-
+@property (nonatomic, copy) NSString * newsUrl;
+@property (nonatomic, copy) NSString * title;
+- (void)setNewsCellData:(LKNewsSocialListModel *)dataModal;
 @end

@@ -19,8 +19,6 @@
 @interface OPMoreViewController ()<UIAlertViewDelegate>
 {
     UILabel         *_lbVer;
-    
-//    OPVersionModel  *_newVer;
 }
 
 @property (nonatomic,weak) UIButton *btnLogout;
@@ -71,13 +69,13 @@
     NSMutableArray * arryGap = [NSMutableArray array];
     NSMutableArray * arryContent = [NSMutableArray array];
     if (model.isLogin) {
-        arryTitles = [NSMutableArray arrayWithObjects:@"关于我们", @"清理缓存", @"使用帮助", @"版本信息", @"退出",nil];
-        arryGap = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], nil];
+        arryTitles = [NSMutableArray arrayWithObjects:@"关于我们", @"清理缓存", @"版本信息", @"退出",nil];
+        arryGap = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], nil];
         arryContent = [NSMutableArray arrayWithObjects:imgvArrow1, imgvArrow2, imgvArrow3, _lbVer, [NSNull null], [NSNull null], nil];
     } else {
-        arryTitles = [NSMutableArray arrayWithObjects:@"关于我们", @"清理缓存", @"使用帮助", @"版本信息", nil];
-        arryGap = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], nil];
-        arryContent = [NSMutableArray arrayWithObjects:imgvArrow1, imgvArrow2, imgvArrow3, _lbVer, [NSNull null], nil];
+        arryTitles = [NSMutableArray arrayWithObjects:@"关于我们", @"清理缓存", @"版本信息", nil];
+        arryGap = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], nil];
+        arryContent = [NSMutableArray arrayWithObjects:imgvArrow1, imgvArrow2, _lbVer, [NSNull null], nil];
     }
 
     
@@ -109,7 +107,7 @@
             btnClear.tag = i;
             [btnClear addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
             
-            if (i == 3) {//版本检查不可点击
+            if (i == 2) {//版本检查不可点击
                 btnClear.enabled = NO;
             }
             [bgV addSubview:btnClear];
@@ -138,10 +136,12 @@
         case 0:
         {
             // 关于我们
-            LKWebTrueViewController *webVC = [[LKWebTrueViewController alloc] init];
-            webVC.webURL = @"";
-            webVC.title = @"关于我们";
-            [UIUtils pushVC:webVC];
+//            LKWebTrueViewController *webVC = [[LKWebTrueViewController alloc] init];
+//            webVC.webURL = @"";
+//            webVC.title = @"关于我们";
+            LKLieViewController * lieVC = [LKLieViewController new];
+            
+            [UIUtils pushVC:lieVC];
         }
             break;
         case 1:
@@ -167,19 +167,19 @@
             });
         }
             break;
-        case 2:
-        {
-            LKLieViewController * lieVC = [LKLieViewController new];
-            [UIUtils pushVC:lieVC];
-        }
-            break;
-        case 4:
+//        case 2:
+//        {
+//            LKLieViewController * lieVC = [LKLieViewController new];
+//            [UIUtils pushVC:lieVC];
+//        }
+//            break;
+        case 3:
         {
             [[LKUserInfoManager sharedInstance] clean];
             [UIUtils popViewControllerAnimated:YES];
         }
             break;
-        case 3:
+        case 2:
             
         default:
             break;

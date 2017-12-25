@@ -57,5 +57,18 @@
     }];
 }
 
+//心水收藏列表
+-(NSURLSessionDataTask *)getCollectListSuccessBlock:(void (^)(NSArray * mArray))successBlk
+                                     withErrorBlock:(ErrorBlock)errorBlk {
+    return [self getWithUrl:APIGET_Mine_Collect params:nil success:^(id data,LKCommonDataModel *dataModel) {
+        
+        NSError *error = nil;
+        NSArray *arr = [MTLJSONAdapter modelsOfClass:LKNewsSocialListModel.class fromJSONArray:(NSArray*)data error:&error];
+        successBlk(arr);
+        
+    } failure:^(NSString *errMsg, NSInteger errCode) {
+        errorBlk(errMsg,errCode);
+    }];
+}
 
 @end

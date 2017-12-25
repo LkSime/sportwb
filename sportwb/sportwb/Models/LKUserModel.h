@@ -14,3 +14,9 @@
 @property (nonatomic, copy) NSString    *isLogin;
 @property (nonatomic, copy) NSString    *username;
 @end
+
+@interface LKContentModel : MTLModel<MTLJSONSerializing>
+@property (nonatomic, copy) NSString * ctime;
+@property (nonatomic, copy) NSString * avatar;
+@property (nonatomic, copy) NSString * content;
+@end

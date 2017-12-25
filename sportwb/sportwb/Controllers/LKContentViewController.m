@@ -1,44 +1,41 @@
 //
-//  LKNewsViewController.m
+//  LKContentViewController.m
 //  sportwb
 //
-//  Created by LkSime on 2017/12/11.
+//  Created by LkSime on 2017/12/25.
 //  Copyright © 2017年 Mahalo. All rights reserved.
 //
 
-#import "LKNewsViewController.h"
+#import "LKContentViewController.h"
 #import "LKNewsModel.h"
 #import "LKNewsApi.h"
 #import "LKWebTrueViewController.h"
-#import "LKNewsCell.h"
+#import "LKCollectCell.h"
 
-@interface LKNewsViewController ()<UITableViewDelegate, UITableViewDataSource> {
+@interface LKContentViewController ()<UITableViewDelegate, UITableViewDataSource> {
     UITableView * mTableView;
     NSMutableArray * mDataSource;
 }
+
 @property(assign) NSInteger mPageIndex;
+
 
 @end
 
-@implementation LKNewsViewController
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        UIImage * unselectImage = [UIImage imageNamed:@"tabbar_message_unselected"];
-        UIImage * selectImage = [UIImage imageNamed:@"tabbar_message_selected"];
-        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"资讯"
-                                                           image:unselectImage selectedImage:selectImage];
-        item.selectedImage = [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        self.tabBarItem = item;
-        self.view.backgroundColor = [UIColor silverColor];
-        
-    }
-    return self;
-}
+@implementation LKContentViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     mDataSource = [NSMutableArray array];
+    [self setTitle:@"心水收藏"];
+    UIImage * _backImage = [[UIImage imageNamed:@"btn_nav_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIButton * _backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 44)];
+    [_backButton setImage:_backImage forState:UIControlStateNormal];
+    [_backButton setImageEdgeInsets:UIEdgeInsetsMake(0, -14, 0, 0)];
+    [_backButton addTarget:self action:@selector(clickBackButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem * _backItem = [[UIBarButtonItem alloc] initWithCustomView:_backButton];
+    self.navigationItem.leftBarButtonItem = _backItem;
+    
     [self getNetworkOfData:NO];
     [self createContentView];
 }
@@ -54,7 +51,7 @@
     [mTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(self.view);
         make.width.equalTo(@(SCREEN_WIDTH));
-        make.height.equalTo(@(SCREEN_HEIGHT));
+        make.height.equalTo(@(SCREEN_HEIGHT - 64));
     }];
     
     MJRefreshStateHeader *header = [MJRefreshStateHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshTableView)];
@@ -71,7 +68,7 @@
 }
 
 -(void)loadMoreTableView{
-    [self getNetworkOfData:YES];
+    //    [self getNetworkOfData:YES];
 }
 
 - (void)getNetworkOfData:(BOOL)isMore {
@@ -80,8 +77,9 @@
     }else{
         _mPageIndex = 1;
     }
-    [SVProgressHUD showWithStatus:@"加载中。。。"];
-    [[LKNewsApi shareInstance] getSocialOfNewsIndex:_mPageIndex page_size:10 withSuccessBlock:^(NSArray *mArray) {
+    [SVProgressHUD showWithStatus:@"正在加载。。。"];
+    [[LKNewsApi shareInstance] getCollectListSuccessBlock:^(NSArray *mArray) {
+        [SVProgressHUD dismiss];
         [mTableView.mj_header endRefreshing];
         [mTableView.mj_footer endRefreshing];
         
@@ -93,10 +91,8 @@
         }
         
         [mTableView reloadData];
-        [SVProgressHUD dismiss];
-
     } withErrorBlock:^(NSString *errMsg, NSInteger errCode) {
-        [SVProgressHUD showErrorWithStatus:errMsg];
+        [SVProgressHUD showErrorWithStatus:@"加载失败"];
     }];
     [mTableView.mj_header endRefreshing];
     
@@ -116,10 +112,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString * mr_identifer = @"LKNewsCell";
-    LKNewsCell * cell = [tableView dequeueReusableCellWithIdentifier:mr_identifer];
+    NSString * mr_identifer = @"LKCollectCell";
+    LKCollectCell * cell = [tableView dequeueReusableCellWithIdentifier:mr_identifer];
     if (cell == nil) {
-        cell = [[LKNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:mr_identifer];
+        cell = [[LKCollectCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:mr_identifer];
     }
     [cell setNewsCellData:mDataSource[indexPath.row]];
     return cell;
@@ -131,10 +127,24 @@
     LKWebTrueViewController * web = [LKWebTrueViewController new];
     web.webURL = model.newsUrl;
     if (model.title.length > 10) {
-       model.title = [NSString stringWithFormat:@"%@...", [model.title substringToIndex:10]];
+        model.title = [NSString stringWithFormat:@"%@...", [model.title substringToIndex:10]];
     }
     web.title = model.title;
     [UIUtils pushVC:web];
+    
+}
+- (void)clickBackButton {
+    [UIUtils popViewControllerAnimated:YES];
+}
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = NO;
+    
+    
+}
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = YES;
     
 }
 - (void)didReceiveMemoryWarning {

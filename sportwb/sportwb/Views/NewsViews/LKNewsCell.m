@@ -48,12 +48,12 @@
     titleLabel = [UILabel new];
     titleLabel.font = FONT_FOR_TEXT_16;
     titleLabel.textColor = COLOR_FOR_TEXT_4D;
-    titleLabel.numberOfLines = 2;
+    titleLabel.numberOfLines = 4;
     [self addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(mImageView);
         make.left.equalTo(mImageView.mas_right).offset(15);
-        make.right.equalTo(@(-10));
+        make.right.equalTo(@(-15));
     }];
     
     UILabel * commentLabel = [UILabel new];

@@ -17,3 +17,13 @@
              };
 }
 @end
+
+@implementation LKContentModel
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"ctime":@"ctime",
+             @"avatar":@"avatar",
+             @"content":@"content"
+             };
+}
+@end

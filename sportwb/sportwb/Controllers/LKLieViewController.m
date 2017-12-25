@@ -26,7 +26,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"啊喔～"];
+    [self setTitle:@"关于我们"];
     UIImage * _backImage = [[UIImage imageNamed:@"btn_nav_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIButton * _backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 44)];
     [_backButton setImage:_backImage forState:UIControlStateNormal];
@@ -35,11 +35,11 @@
     UIBarButtonItem * _backItem = [[UIBarButtonItem alloc] initWithCustomView:_backButton];
     self.navigationItem.leftBarButtonItem = _backItem;
     
-    UIImageView * lieImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Image_brid"]];
+    UIImageView * lieImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Image_us"]];
     [self.view addSubview:lieImageView];
     [lieImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
-        make.height.width.equalTo(@(SCREEN_WIDTH / 2));
+        make.edges.equalTo(self.view);
+//        make.height.width.equalTo(@(SCREEN_WIDTH / 2));
     }];
 }
 - (void)clickBackButton {
